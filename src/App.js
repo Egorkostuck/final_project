@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.sass';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Header from './Components/Header/Header';
+import Footer from './Components/Footer/Footer';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       
       </Route>
     </Switch>
+    <Footer />
     </BrowserRouter>
   );
 }

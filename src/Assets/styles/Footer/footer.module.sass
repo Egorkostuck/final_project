@@ -1,0 +1,76 @@
+@import './../../../App.sass'
+
+.footerContainer
+    background-color: $white
+    width: 100%
+    position: absolute
+    bottom: 0
+    left: 0
+    .accordionContainer
+        width: 70%
+        margin-left: auto
+        margin-right: auto
+        display: flex
+        justify-content: space-around
+        padding-top: 45px
+        padding-bottom: 65px
+        .accordionBlock
+            border-color: $white
+            background-color: $white
+            box-shadow: none
+            margin: 0
+            &:before
+                height: 0
+            .heading
+                color: $grafit
+                font-family: Montserrat
+                font-style: normal
+                font-weight: bold
+                font-size: 24px
+                border: 1px solid white
+                box-shadow: none
+                padding: 0
+            .itemLink
+                color: $gray
+                text-decoration: none
+                font-weight: 500
+                font-size: 16px
+    .socialNetworksSection
+        width: 100%
+        height: 225px
+        background-color: $gray-ultra-light
+        display: flex
+        align-items: flex-end
+        .socialContainer
+            width: 70%
+            height: auto
+            margin-left: auto 
+            margin-right: auto 
+            display: flex
+            flex-direction: row
+            justify-content: space-between            
+            align-items: flex-start
+            .corporationBlock img:first-child
+                margin-right: 60px
+            .corporationBlock img:nth-child(2)
+                width: 87px
+            .socialBlock a
+                color: $red
+                margin-right: 45px
+                &:hover
+                    color: $grafit
+    .privacyPolicySection
+        width: 70%
+        height: 75px
+        margin-left: auto
+        margin-right: auto
+        display: flex
+        justify-content: space-between
+        font-weight: 500
+        font-size: 12px
+        color: $gray
+        div
+            margin: auto 0
+
+
+            
