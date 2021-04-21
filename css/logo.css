@@ -1,0 +1,11 @@
+.container-logo {
+  position: relative;
+}
+
+.container-logo .header-holding {
+  width: 62px;
+  height: 41px;
+  position: absolute;
+  top: 30px;
+}
+/*# sourceMappingURL=logo.css.map */

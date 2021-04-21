@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,SAAS,CAAC;EACN,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;CAAG",
+    "sources": [
+        "../src/Assets/styles/Header/navMenu.module.sass"
+    ],
+    "names": [],
+    "file": "navMenu.module.css"
+}

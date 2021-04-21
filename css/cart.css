@@ -1,0 +1,10 @@
+.cart-container {
+  display: flex;
+}
+
+.cart-container .icon-cart {
+  width: 24px;
+  height: 24px;
+  align-items: center;
+}
+/*# sourceMappingURL=cart.css.map */

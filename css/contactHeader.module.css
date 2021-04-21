@@ -1,0 +1,41 @@
+body {
+  width: 100%;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #333333;
+  background-color: grey;
+}
+
+.contactHeaderContainer {
+  display: flex;
+  justify-content: space-between;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.contactHeaderContainer .sityBlock {
+  display: flex;
+}
+
+.contactHeaderContainer .sityBlock p:first-child {
+  margin-right: 70px;
+}
+
+.contactHeaderContainer .numberBlock {
+  display: flex;
+}
+
+.contactHeaderContainer .numberBlock p {
+  margin-right: 70px;
+}
+
+.contactHeaderContainer .numberBlock a {
+  color: white;
+  text-decoration: none;
+  margin: auto 0;
+}
+/*# sourceMappingURL=contactHeader.module.css.map */
