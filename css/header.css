@@ -1,15 +1,18 @@
 .header-container {
+  width: 100%;
+  position: fixed;
+  background-color: #00000047;
+  z-index: 100;
+}
+
+.header-container .header-section {
   width: 70%;
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
-  position: fixed;
-  left: 15%;
-  top: 0;
-  z-index: 100;
 }
 
-.header-container .section-menu {
+.header-container .header-section .section-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;

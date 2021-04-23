@@ -1,0 +1,79 @@
+@import './../../../App.sass'
+
+.dashBoardSection
+    width: 100vw
+    .dashBoardContainer,
+    .dashBoardPopularContainer,
+    .aboutCompanyContainer
+        width: 70%    
+        margin-left: auto
+        margin-right: auto
+    h4
+        font-weight: bold
+        font-size: 48px
+        color: $grafit
+        text-transform: uppercase
+        margin-top: 132px
+        margin-bottom: 100px
+    .catalogDashBoard,
+    .popularDashBoard
+        display: grid
+        grid-template-columns: repeat(3, 383px)
+        grid-template-rows: repeat(2, 440px)
+        grid-column-gap: 50px
+        grid-row-gap: 2.5em
+        .blockCatalog
+            display: flex
+            justify-content: center
+            position: relative
+            background: transparent
+            .catalogImg
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%)
+            .blockText
+                font-weight: 500
+                font-size: 28px
+                line-height: 34px
+                margin-bottom: 60px
+                color: $white
+                position: absolute
+                bottom: 0
+                align-items: center
+            .button
+                width: 100%
+                font-size: 16px
+                color: $gray-light
+                background-color: $red
+                position: absolute
+                bottom: 0
+                left: 0
+                display: none
+                img 
+                    margin-left: 35px
+                    margin-right: 20px
+        .blockCatalog:hover .button,
+            display: flex
+        .blockPopular
+            height: 440px
+            position: relative
+            .button
+                width: 100%
+                font-size: 16px
+                color: $gray-light
+                background-color: $red
+                position: absolute
+                bottom: 0
+                display: none
+                img
+                    margin-left: 35px
+                    margin-right: 20px
+        .blockPopular:hover .button,
+            display: flex
+    .aboutCompanyBlock
+        width: 80%
+        margin: 0 auto
+        p:first-child
+            font-weight: 600
+        li
+            color: $red
+            span
+                color: $grafit

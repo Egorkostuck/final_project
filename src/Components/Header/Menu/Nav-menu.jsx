@@ -5,16 +5,16 @@ const NavMenu = () => {
     return (
         <nav className = {classes.navBlock}>
             <NavLink to = {'/sale'}>
-                Распродажа
+                <p>Распродажа</p>
             </NavLink>
             <NavLink to = {'/contact'}>
-                Контакты
+                <p>Контакты</p>
             </NavLink>
             <NavLink to = {'/catalog'}>
-                Каталог
+                <p>Каталог</p>
             </NavLink>
             <NavLink to = {'/sign_in'}>
-                Войти в личный кабинет
+                <p>Войти в личный кабинет</p>
             </NavLink>
         </nav>
     )

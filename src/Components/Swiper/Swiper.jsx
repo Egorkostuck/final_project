@@ -5,6 +5,7 @@ import SwiperCore, {Pagination, A11y, Autoplay, EffectFade} from 'swiper';
 import 'swiper/swiper.scss';
 import 'swiper/components/pagination/pagination.scss';
 import 'swiper/components/effect-fade/effect-fade.scss';
+import './../../Assets/styles/index.css';
 
 import slide1 from './../../Assets/img/slider-banner/slide1.png';
 import slide2 from './../../Assets/img/slider-banner/slide2.png';
@@ -29,7 +30,9 @@ const Slider = () => {
             effect='fade'
             spaceBetween={0}
             slidesPerView={1}
-            pagination={{ clickable: true }}
+            pagination={{ 
+                // el: '.swiper-pagination',
+                clickable: true }}
             autoplay={{
                 delay: 5500,
                 disableOnInteraction: false,
@@ -37,13 +40,16 @@ const Slider = () => {
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log('slide change')}>
             {SLIDER.map((item,index) => (
-                <SwiperSlide className = {classes.slide}>
-                    <img key = {index} src = {item.img} alt = {item.alt}/>
-                    <div className={classes.textSlide}>
-                        <h1>Мойки, смесители<br/>и аксессуары</h1>
-                        <h3>от ведущего производителя сантехники<br/>для кухни Reginox</h3>
-                    </div>                    
-                </SwiperSlide>
+                <div className={classes.slide}>
+                    <SwiperSlide className = {classes.slide}>
+                        <img key = {index} src = {item.img} alt = {item.alt}/>
+                        <div className={classes.textSlide}>
+                            <h1>Мойки, смесители<br/>и аксессуары</h1>
+                            <h3>от ведущего производителя сантехники<br/>для кухни Reginox</h3>
+                        </div>                    
+                    </SwiperSlide>
+                </div>
+               
             ))}
         </Swiper>
     );

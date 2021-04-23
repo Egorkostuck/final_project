@@ -1,11 +1,12 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 import classes from './../../../Assets/styles/Header/Nav.module.sass';
+import './../../../Assets/styles/Header/index.css';
 
 
 const Nav = () => {
     return(
-        <nav className = { classes.nav }>
+        <nav className = { classes.nav } >
             <NavLink to = '/sinks'>
                 Мойки
             </NavLink>

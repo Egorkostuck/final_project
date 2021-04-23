@@ -1,22 +1,28 @@
 import logo from './logo.svg';
 import './App.sass';
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import {HashRouter, Switch, Route} from 'react-router-dom';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
-import Swiper from './Components/Swiper/Swiper';
+import Dashboard from './Components/Dashboard/Dashboard';
+import {Provider} from 'react-redux';
+import Store from './State/Store';
 
 function App() {
+  console.log(Store);
   return (
-    <BrowserRouter>
-    <Header />
-    <Switch>
-      <Route path = '/sinks'>
-      
-      </Route>
-    </Switch>
-    <Swiper />
-    <Footer />
-    </BrowserRouter>
+    <HashRouter>
+      <Provider store={Store}>
+        <Header />
+        <section className='body'>
+          <Switch>
+            <Route extend path = '/'>
+              <Dashboard />
+            </Route>
+          </Switch>
+        </section>   
+      <Footer />
+      </Provider>    
+    </HashRouter>
   );
 }
 

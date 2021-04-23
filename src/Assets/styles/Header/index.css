@@ -1,0 +1,4 @@
+.nav a.active::after {
+    background-color: white;
+    width: 120%;
+}
