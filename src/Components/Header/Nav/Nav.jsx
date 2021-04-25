@@ -7,7 +7,7 @@ import './../../../Assets/styles/Header/index.css';
 const Nav = () => {
     return(
         <nav className = { classes.nav } >
-            <NavLink to = '/sinks'>
+            <NavLink to='/catalog-sink'>
                 Мойки
             </NavLink>
             <NavLink to = '/mixers'>

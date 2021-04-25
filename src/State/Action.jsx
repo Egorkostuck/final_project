@@ -11,3 +11,17 @@ export function close(open) {
         payload: open
     }
 }
+
+export function addGoods(goods) {
+    return {
+        type: 'ADD_GOODS',
+        payload: goods
+    }
+}
+
+export function deleteGoods(id) {
+    return {
+        type: 'ADD_GOODS',
+        payload: id
+    }
+}

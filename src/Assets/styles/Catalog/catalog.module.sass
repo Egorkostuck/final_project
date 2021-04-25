@@ -1,0 +1,46 @@
+@import './../../../App.sass'
+
+.catalogContainer
+    width: 70%
+    margin: 0 auto
+    align-items: center
+    padding-top: 300px
+    display: grid
+    grid-template-columns: repeat(3, 383px)
+    grid-template-rows: repeat(3, 440px)
+    grid-column-gap: 25px
+    grid-row-gap: 25px
+    .catalogBlock
+        width: 383px
+        height: 440px
+        background-color: $gray-light
+        text-align: start
+        position: relative
+        .sink
+            width: 315px
+            height: 180px
+            margin: 70px 34px 0 34px
+        .name
+            font-weight: 800
+            font-size: 18px
+            color: $grafit
+            margin: 50px 0 0 30px
+        .coast
+            margin: 5px 0 0 30px
+        .button
+                width: 100%
+                font-size: 16px
+                color: $gray-ultra-light
+                background-color: $red
+                position: absolute
+                bottom: 0
+                left: 0
+                display: none
+                img 
+                    margin-left: 35px
+                    margin-right: 20px
+    .catalogBlock:hover
+        background-color:  $gray-light
+        .button
+            display: flex
+        
