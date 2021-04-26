@@ -8,7 +8,7 @@ const Sink = () => {
     const sinkArr = useSelector(state => state.catalogReducer.sink);
     const cartArr = useSelector(state => state.cartReducer.cart);
     const dispatch = useDispatch();
-
+   
     const addGoodsInCart = (item) => {
         console.log(item);
         dispatch(addGoods(item));

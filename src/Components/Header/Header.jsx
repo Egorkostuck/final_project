@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import './../../Assets/styles/Header/header.sass';
 import Menu from './Menu/Menu';
 import Logo from './Logo/Logo';
-import Cart from './Cart/Cart';
+import CartIcon from './Cart/CartHeader';
 import Nav from './Nav/Nav';
 import ContactHeader from './Contact/contactHeader';
 // import { useSelector, useDispatch } from 'react-redux';
@@ -29,7 +29,7 @@ const Header = () => {
                 <div className = 'section-menu'>
                     <Menu  open={open} setOpen={setOpen}/>
                     <Logo />
-                    <Cart />
+                    <CartIcon />
                 </div>
                 <div>
                     {open && <NavMenu />}

@@ -7,8 +7,10 @@ import Dashboard from './Components/Dashboard/Dashboard';
 import {Provider} from 'react-redux';
 import Store from './State/Store';
 import Sink from './Components/Catalog/Sink/Sink';
+import Cart from './Components/Cart/Cart';
 
 function App() {
+
   console.log(Store);
   return (
     <BrowserRouter>
@@ -21,6 +23,9 @@ function App() {
             </Route> */}
             <Route path='/catalog-sink'>
               <Sink />
+            </Route>
+            <Route path='/cart'>
+              <Cart />
             </Route>
           </Switch>
         </section>   

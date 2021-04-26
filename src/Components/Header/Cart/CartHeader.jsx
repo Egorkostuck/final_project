@@ -1,9 +1,9 @@
 import React from 'react';
-import './../../../Assets/styles/Header/cart.sass';
+import './../../../Assets/styles/Header/cartIcon.sass';
 import icon from './../../../Assets/img/icons/icon-cart-white.svg';
 import { NavLink } from 'react-router-dom';
 
-const Cart = () => {
+const CartIcon = () => {
     return (
         <NavLink to='/cart'>
             <div className = 'cart-container'>
@@ -13,4 +13,4 @@ const Cart = () => {
     );
 }
 
-export default Cart;
+export default CartIcon;

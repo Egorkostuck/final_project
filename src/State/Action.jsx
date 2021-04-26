@@ -21,7 +21,19 @@ export function addGoods(goods) {
 
 export function deleteGoods(id) {
     return {
-        type: 'ADD_GOODS',
+        type: 'DELETE_GOODS',
         payload: id
+    }
+}
+export function addCount(item) {
+    return {
+        type: 'ADD_COUNT',
+        payload: item
+    }
+}
+export function deleteCount(item) {
+    return {
+        type: 'DELETE_COUNT',
+        payload: item
     }
 }
