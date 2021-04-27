@@ -10,13 +10,13 @@ const Nav = () => {
             <NavLink to='/catalog-sink'>
                 Мойки
             </NavLink>
-            <NavLink to = '/mixers'>
+            <NavLink to = '/catalog-mixers'>
                 Смесители
             </NavLink>
             <NavLink to = '/accessories'>
                 Аксессуары
             </NavLink>
-            <NavLink to = '/kitchen_stoves'>
+            <NavLink to = '/catalog-plate'>
                 Плиты
             </NavLink>
             <NavLink to = '/washbasins'>

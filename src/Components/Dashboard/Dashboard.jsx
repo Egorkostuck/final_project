@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Swiper from './../Swiper/Swiper';
 import classes from './../../Assets/styles/Dashboard/dashboard.module.sass';
+import styles from './../../Assets/styles/Catalog/catalog.module.sass';
 import { NavLink } from 'react-router-dom';
+import {useSelector, useDispatch} from 'react-redux';
 import sinks from './../../Assets/img/catalogue/sinks.png';
 import mixers from './../../Assets/img/catalogue/mixers.png';
 import accessories from './../../Assets/img/catalogue/accessories.png';
@@ -16,24 +18,35 @@ import img5 from './../../Assets/img/popular_product/img_5.png';
 import img6 from './../../Assets/img/popular_product/img_6.png';
 import icon from './../../Assets/img/icons/catalogue.svg';
 import iconCart from './../../Assets/img/icons/icon-cart-white.svg';
+import {addGoods} from './../../State/Action';
+import {ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-const Dashboard = () => {
+const Dashboard = ({successToast}) => {
     const CATALOG = [
-        {img: sinks, name: 'Мойки', path: '/sinks', alt: 'Каталог моек'},
-        {img: mixers, name: 'Смесители', path:'/mixers', alt: 'Каталог смесителей'},
-        {img: accessories, name: 'Аксессуары', path:'/accessories', alt: 'Каталог аксессуаров'},
-        {img: kitchen, name: 'Плиты', path:'/kitchen_stoves', alt: 'Каталог плит'},
-        {img: washbasins, name: 'Умывальники', path:'/washbasins', alt: 'Каталог умывальников'},
-        {img: tableTop, name: 'Столешницы', path:'/table_top', alt: 'Каталог столешниц'}
+        {img: sinks, name: 'Мойки', path: '/catalog-sink', alt: 'Каталог моек'},
+        {img: mixers, name: 'Смесители', path:'/catalog-mixers', alt: 'Каталог смесителей'},
+        {img: accessories, name: 'Аксессуары', path:'/catalog-accessories', alt: 'Каталог аксессуаров'},
+        {img: kitchen, name: 'Плиты', path:'/catalog-plate', alt: 'Каталог плит'},
+        {img: washbasins, name: 'Умывальники', path:'/catalog-washbasins', alt: 'Каталог умывальников'},
+        {img: tableTop, name: 'Столешницы', path:'/catalog-table_top', alt: 'Каталог столешниц'}
     ];
-    const POPULAR = [
-        {img: img1, name: 'Amsterdam 25 Dark chocolate', path: '/popular', id: 'popular', coast: '9 950 руб'},
-        {img: img2, name: 'YADKIN K1065K black', path: '/popular', id: 'popular', coast: '31 000 руб'},
-        {img: img3, name: 'Diplomat R 20 lux', path: '/popular', id: 'popular', coast: '17 000 руб'},
-        {img: img4, name: 'Столешница WAFELBLAD R00939', path: '/popular', id: 'popular', coast: '47 520 руб'},
-        {img: img5, name: 'Amsterdam 34 Caffe Silvery', path: '/popular',  id: 'popular', coast: '19 000 руб'},
-        {img: img6, name: 'МойR18 370 OSP lux', path: '/popular',  id: 'popular', coast: '7 300 руб'}
-    ];
+    const arrPop = useSelector(state => state.catalogReducer.popular),
+        cartArr = useSelector(state => state.cartReducer.cart),
+        dispatch = useDispatch();
+   
+    const addGoodsInCart = (item) => {
+        console.log(item);
+        dispatch(addGoods(item));
+        successToast('Товар добавлен в корзину');
+    };
+
+    useEffect((item) => {
+        let stringState = JSON.stringify(cartArr);
+        localStorage.setItem('cart', stringState);          
+    }, [cartArr]);
+
+    
     return(
         <div className={classes.dashBoardSection}>
             <Swiper />
@@ -56,18 +69,26 @@ const Dashboard = () => {
             </div>
             <div className={classes.dashBoardPopularContainer}>
                 <h4>Популярные товары</h4>
-                <div className={classes.popularDashBoard}>
-                    {POPULAR.map((item, index) => (
-                        <div key={`${index} + pop`} className={classes.blockPopular}>
-                            <img src={item.img} alt={item.name} />
-                            <NavLink to={`${item.path} + ${index}`}>
-                                <div className={classes.button}>
+                <div className={classes.catalogContainer}>
+                    {arrPop.map((item) => (
+                        <div className={classes.catalogBlock}>
+                            <img className={classes.sink} src={item.img} alt={`${item.name} image`}/>
+                            <h5 className={classes.name}>{item.name}</h5>
+                            <p className={classes.coast}>{`${item.coast} руб.`}</p>
+                            <div>
+                                <div onClick={() => addGoodsInCart(item)} className={classes.button}>
                                     <img src={iconCart} alt='иконка корзины' />
                                     <p>В корзину</p>
                                 </div>
-                            </NavLink>  
-                        </div>                 
+                            </div>
+                        </div>
                     ))}
+                    <ToastContainer
+                        newestOnTop={false}
+                        rtl={false}
+                        pauseOnFocusLoss
+                        className={styles.toast}
+                    />
                 </div>
             </div>
             <div className={classes.aboutCompanyContainer}>

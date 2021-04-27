@@ -6,8 +6,8 @@ import {addGoods} from './../../../State/Action';
 import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const Sink = ({successToast}) => {
-    const sinkArr = useSelector(state => state.catalogReducer.sink);
+const Plate = ({successToast}) => {
+    const plateArr = useSelector(state => state.catalogReducer.plate);
     const cartArr = useSelector(state => state.cartReducer.cart);
     const dispatch = useDispatch();
    
@@ -22,10 +22,9 @@ const Sink = ({successToast}) => {
         localStorage.setItem('cart', stringState);          
     }, [cartArr]);
 
-    console.log(cartArr);
     return(
         <div className={classes.catalogContainer}>
-            {sinkArr.map((item) => (
+            {plateArr.map((item) => (
                 <div className={classes.catalogBlock}>
                     <img className={classes.sink} src={item.img} alt={`${item.name} image`}/>
                     <h5 className={classes.name}>{item.name}</h5>
@@ -48,4 +47,4 @@ const Sink = ({successToast}) => {
     )
 }
 
-export default Sink;
+export default Plate;

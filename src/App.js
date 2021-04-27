@@ -8,8 +8,25 @@ import {Provider} from 'react-redux';
 import Store from './State/Store';
 import Sink from './Components/Catalog/Sink/Sink';
 import Cart from './Components/Cart/Cart';
+import Mixers from './Components/Catalog/mixer/Mixers';
+import Plate  from './Components/Catalog/Plate/Plate';
+import {toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function App() {
+
+  const successToast = (text) => {        
+    toast.success(text, {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+    });        
+  };
 
   console.log(Store);
   return (
@@ -18,13 +35,19 @@ function App() {
         <Header />
         <section className='body'>
           <Switch>
-            {/* <Route path = '/'>
-              <Dashboard />
-            </Route> */}
-            <Route path='/catalog-sink'>
-              <Sink />
+            <Route exact path = '/'>
+              <Dashboard successToast={successToast}/>
             </Route>
-            <Route path='/cart'>
+            <Route exact path='/catalog-sink'>
+              <Sink successToast={successToast}/>
+            </Route>
+            <Route exact path='/catalog-mixers'>
+              <Mixers successToast={successToast}/>
+            </Route>
+            <Route exact path='/catalog-plate'>
+              <Plate successToast={successToast}/>
+            </Route>
+            <Route exact path='/cart'>
               <Cart />
             </Route>
           </Switch>
