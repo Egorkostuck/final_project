@@ -22,8 +22,8 @@ const Nav = () => {
             <NavLink to = '/washbasins'>
                 Умывальники
             </NavLink>
-            <NavLink to = '/manhattan'>
-                Умывальники
+            <NavLink to = '/sign-up'>
+                SignUp
             </NavLink>
         </nav>
     );

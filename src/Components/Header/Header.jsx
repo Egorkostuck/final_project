@@ -25,7 +25,7 @@ const Header = () => {
                     <CartIcon />
                 </div>
                 <div>
-                    {open && <NavMenu />}
+                    {open && <NavMenu setOpen={setOpen} />}
                 </div>
                 <div>
                     <Nav />

@@ -37,3 +37,9 @@ export function deleteCount(item) {
         payload: item
     }
 }
+export function addUser(item) {
+    return {
+        type: 'ADD_USERS',
+        payload: item
+    }
+}

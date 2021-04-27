@@ -1,20 +1,23 @@
 import React from 'react';
-import { NavLink } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 import classes from './../../../Assets/styles/Header/navMenu.module.sass';
-const NavMenu = () => {
+const NavMenu = ({setOpen}) => {
+    const close = () => {
+        setOpen(false);
+    }
     return (
         <nav className = {classes.navBlock}>
-            <NavLink to = {'/sale'}>
-                <p>Распродажа</p>
-            </NavLink>
-            <NavLink to = {'/contact'}>
+            <NavLink onClick={() => close()} to='/contact'>
                 <p>Контакты</p>
             </NavLink>
-            <NavLink to = {'/catalog'}>
+            <NavLink onClick={() => close()} to='/catalog'>
                 <p>Каталог</p>
             </NavLink>
-            <NavLink to = {'/sign_in'}>
-                <p>Войти в личный кабинет</p>
+            <NavLink onClick={() => close()} to='/sign-up'>
+                <p>Регистрация</p>
+            </NavLink>
+            <NavLink to='/sign-in'>
+                <p onClick={() => close()}>Войти в личный кабинет</p>
             </NavLink>
         </nav>
     )

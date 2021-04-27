@@ -35,6 +35,19 @@ body {
   margin-right: 70px;
 }
 
+.contactHeaderContainer .sityBlock .select {
+  font-size: 16px;
+  color: #ffffff;
+  background-color: transparent;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.contactHeaderContainer .sityBlock .select option {
+  color: #333333;
+}
+
 .contactHeaderContainer .numberBlock {
   display: flex;
 }

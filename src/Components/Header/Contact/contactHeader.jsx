@@ -5,7 +5,13 @@ const ContactHeader = () => {
     return(
         <div className = {classes.contactHeaderContainer}>
             <div className = {classes.sityBlock}>
-                <p>Минск</p>
+                <p>
+                    <select size='1' className={classes.select} name='sity[]'>
+                        <option value='Minsk' >Минск</option>
+                        <option value='Moskow'>Москва</option>
+                        <option value='Grodno'>Гродно</option>
+                    </select>
+                </p>
                 <p>Обратный звонок</p>
             </div>
             <div className = {classes.numberBlock}>
