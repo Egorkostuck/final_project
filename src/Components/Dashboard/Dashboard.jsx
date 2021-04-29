@@ -12,7 +12,7 @@ import washbasins from './../../Assets/img/catalogue/washbasins.png';
 import tableTop from './../../Assets/img/catalogue/tabletops.png';
 import icon from './../../Assets/img/icons/catalogue.svg';
 import iconCart from './../../Assets/img/icons/icon-cart-white.svg';
-import {addGoods} from './../../State/Action';
+import {addGoods, disableGoods} from './../../State/Action';
 import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -32,6 +32,7 @@ const Dashboard = ({successToast}) => {
     const addGoodsInCart = (item) => {
         console.log(item);
         dispatch(addGoods(item));
+        dispatch(disableGoods(item.id, 'popular'));
         successToast('Товар добавлен в корзину');
     };
 
@@ -45,7 +46,7 @@ const Dashboard = ({successToast}) => {
         <div className={classes.dashBoardSection}>
             <Swiper />
             <div className={classes.dashBoardContainer}>
-                <h4 id='#catalog'>Каталог</h4>
+                <h4 id='block-catalog'>Каталог</h4>
                 <div className={classes.catalogDashBoard}>
                     {CATALOG.map((item, index) => (
                         <div key={index} className={classes.blockCatalog}>
@@ -70,10 +71,11 @@ const Dashboard = ({successToast}) => {
                             <h5 className={classes.name}>{item.name}</h5>
                             <p className={classes.coast}>{`${item.coast} руб.`}</p>
                             <div>
+                                {!item.inCart ?
                                 <div onClick={() => addGoodsInCart(item)} className={classes.button}>
                                     <img src={iconCart} alt='иконка корзины' />
                                     <p>В корзину</p>
-                                </div>
+                                </div> : ''}
                             </div>
                         </div>
                     ))}

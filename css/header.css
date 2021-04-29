@@ -10,11 +10,13 @@
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 15px;
 }
 
 .header-container .header-section .section-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 20px;
 }
 /*# sourceMappingURL=header.css.map */

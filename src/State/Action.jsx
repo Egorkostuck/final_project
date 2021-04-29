@@ -43,3 +43,17 @@ export function addUser(item) {
         payload: item
     }
 }
+
+export function changeCity(city) {
+    return {
+        type: 'CHANGE_CONTACT',
+        payload: city
+    }
+}
+
+export function disableGoods(id, field) {
+    return {
+        type: 'DISABLE_GOODS',
+        payload: [id,field]        
+    }
+}

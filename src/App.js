@@ -14,6 +14,7 @@ import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import SignUp from './Components/SignUp/SignUp';
 import SignIn from './Components/SignIn/SignIn';
+import Contact from './Components/Contact/ContactComp';
 
 function App() {
 
@@ -65,6 +66,9 @@ function App() {
             </Route>
             <Route exact path='/catalog-plate'>
               <Plate successToast={successToast}/>
+            </Route>
+            <Route exact path='/contact'>
+              <Contact successToast={successToast}/>
             </Route>
             <Route exact path='/cart'>
               <Cart />

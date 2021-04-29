@@ -10,7 +10,7 @@ const NavMenu = ({setOpen}) => {
             <NavLink onClick={() => close()} to='/contact'>
                 <p>Контакты</p>
             </NavLink>
-            <NavLink onClick={() => close()} to='/catalog'>
+            <NavLink onClick={() => close()} to='/#block-catalog'>
                 <p>Каталог</p>
             </NavLink>
             <NavLink onClick={() => close()} to='/sign-up'>

@@ -1,0 +1,101 @@
+@import './../../../App.sass'
+.contactContainer
+    width: 100%
+    max-width: 100vw
+    .contactSection
+        width: 70%
+        max-width: 1280px
+        margin: 250px auto 100px auto
+        .titleContact
+            font-weight: bold
+            font-size: 48px
+            color: $grafit
+            margin-bottom: 35px
+        .contactBlock
+            width: 100%
+            display: flex
+            justify-content: space-between
+            .leftBlock
+                width: 60%
+                .contactCity
+                    display: flex
+                    padding-bottom: 16px
+                    margin-bottom: 56px
+                    border-bottom: 1px solid $gray-light
+                    box-sizing: border-box 
+                    p
+                        color: $gray
+                        &:first-child
+                            margin-right: 64px
+                        &:hover
+                            color: $red
+                    .colorActive 
+                        color: $red
+                .infoContact
+                    display: flex
+                    justify-content: space-between
+                    h5
+                        font-weight: 500
+                        font-size: 24px
+                        line-height: 40px
+                        margin-bottom: 14px
+                    a
+                        font-size: 18px
+                        color: $grafit
+                        text-decoration: none
+                        margin-bottom: 4px
+                        &:hover
+                            color: $red
+                    .comment
+                        font-size: 14px
+                        color: $med
+                    p
+                        font-size: 18px
+            .feedBackContainer
+                width: 40%
+                max-width: 413px
+                height: 622px
+                background-color: $gray-ultra-light
+                padding: 40px 36px
+                form
+                    display: flex
+                    flex-direction: column
+                    .titleLogin
+                        font-weight: 800
+                        font-size: 18px
+                        line-height: 22px
+                        margin-bottom: 32px
+                    .inputCall,
+                    .inputText
+                        height: 70px
+                        font-size: 16px
+                        line-height: 20px
+                        padding: 26px 24px
+                        box-sizing: border-box
+                        border: none
+                        outline: none
+                        margin-bottom: 24px
+                    .inputText
+                        width: 100%
+                        height: 152px
+                        font-family: Montserrat
+                        font-size: 16px
+                        line-height: 20px
+                        resize: none
+                    .buttonCall
+                        width: 100%
+                        max-width: 341px
+                        height: 70px
+                        background-color: $red
+                        color: $white
+                        font-size: 16px
+                        line-height: 20px
+                        border: none
+                        outline: none
+                        margin-bottom: 14px
+                        &:hover
+                            background-color: #2f9e01
+                    p
+                        font-size: 14px
+                        color: $gray
+                        line-height: 145%

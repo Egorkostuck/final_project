@@ -5,6 +5,7 @@ import iconCart from './../../../Assets/img/icons/icon-cart-white.svg';
 import {addGoods} from './../../../State/Action';
 import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import {disableGoods} from './../../../State/Action';
 
 const Sink = ({successToast}) => {
     const sinkArr = useSelector(state => state.catalogReducer.sink);
@@ -15,6 +16,7 @@ const Sink = ({successToast}) => {
         console.log(item);
         dispatch(addGoods(item));
         successToast('Товар добавлен в корзину');
+        dispatch(disableGoods(item.id, 'sink'));
     };
 
     useEffect((item) => {
@@ -30,12 +32,12 @@ const Sink = ({successToast}) => {
                     <img className={classes.sink} src={item.img} alt={`${item.name} image`}/>
                     <h5 className={classes.name}>{item.name}</h5>
                     <p className={classes.coast}>{`${item.coast} руб.`}</p>
-                    <div>
+                    {!item.inCart ? <div>
                         <div onClick={() => addGoodsInCart(item)} className={classes.button}>
                             <img src={iconCart} alt='иконка корзины' />
                             <p>В корзину</p>
                         </div>
-                    </div>
+                    </div> : ''}                    
                 </div>
             ))}
             <ToastContainer

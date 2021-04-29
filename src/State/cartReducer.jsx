@@ -3,6 +3,8 @@ const initialState = {cart: JSON.parse(localStorage.getItem('cart')) || []};
 export default (state = initialState, action) => {   
     switch (action.type) {
         case 'ADD_GOODS':
+            // const item = action.payload
+            // item.inCart = true;
             return {
                 ...state,
                 cart: [...state.cart, action.payload],

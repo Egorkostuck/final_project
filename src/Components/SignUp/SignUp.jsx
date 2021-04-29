@@ -6,6 +6,7 @@ import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {addUser} from './../../State/Action';
 import {useSelector, useDispatch} from 'react-redux';
+import emailjs from 'emailjs-com';
 
 const SignUp = ({successToast, errorToast}) => {
     const {register, handleSubmit, errors} = useForm();
@@ -23,7 +24,7 @@ const SignUp = ({successToast, errorToast}) => {
             USERS.push(newUser);
             dispatch(addUser(newUser));
             successToast('Вы успешно зарегистрированы!');
-            // sendEmail(newUser);
+            sendEmail(newUser);
         };  
         if(arrUser !== 0) {
             arrUser.find(item => (item.name === newUser.name || item.email === newUser.email)) ? errorToast('Такие имя или пароль уже существуют') : addNewUser();
@@ -36,6 +37,15 @@ const SignUp = ({successToast, errorToast}) => {
         let strigArr = JSON.stringify(arrUser);
         localStorage.setItem('users', strigArr);
     },[arrUser]);
+
+    const sendEmail = (newUser) => {    
+        emailjs.send("service_qw82aqe","template_8xwzayf",{
+            from_name: newUser.name,
+            name: "Admin",
+            email: newUser.email,
+            text: 'Add new user'
+        }, 'user_fTnN5ADGWjQU2M7Ny7cjV');
+    };
 
     return(
         <div>
