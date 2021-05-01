@@ -2,15 +2,17 @@ import React, {useEffect} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import {deleteGoods, deleteCount, addCount} from './../../State/Action';
 import styles from './../../Assets/styles/Cart/cart.module.sass';
+import { NavLink } from 'react-router-dom';
 
 
 const Cart = () => {
     const CARTARR = useSelector(state => state.cartReducer.cart);
     const dispatch = useDispatch();
+
     let sum = 0,
         percent = 0,
-        quantity = 0;
-
+        quantity = 0,
+        newSum = 0;
     console.log(CARTARR);
 
     const deleteGoodsInCart = (item) => {
@@ -50,14 +52,16 @@ const Cart = () => {
         return percent;
     }
 
-    const newSum = () => {
-        let newSum = (sum - ((sum*percent)/100));
-        return newSum;
+    const newSumFun = () => {
+        newSum = (sum - ((sum*percent)/100));
+        return `${newSum} руб.`;
     }
 
     useEffect(() => {
         let stringState = JSON.stringify(CARTARR);
         localStorage.setItem('cart', stringState);
+        let stringCheck = JSON.stringify({sum: sum, percent: percent, quantity: quantity, newSum: newSum, promo: false});
+        localStorage.setItem('check', stringCheck);
     }, [CARTARR]);
 
     return(
@@ -68,7 +72,7 @@ const Cart = () => {
                     {CARTARR.map((item, index) => (
                         <div key={index} className={styles.goods}>
                             <img src={item.img} alt={`${item.name} image`} />
-                            <div>
+                            <div className={styles.infoGoods}>
                                 <h5 className={styles.name}>{item.name}</h5>
                                 <p className={styles.coast}>{`${item.coast} руб.`}</p>
                             </div>
@@ -83,8 +87,7 @@ const Cart = () => {
                                         <p>{item.count}</p>
                                     </div>
                                     <button onClick={() => addCountGoods(item)} type='button'>+</button>
-                                </div>
-                                
+                                </div> 
                             </div>
                         </div>
                     ))}
@@ -104,9 +107,12 @@ const Cart = () => {
                         </div>
                         <div className={styles.newSum}>
                             <h5>Итого</h5> 
-                            <p>{newSum()}</p> 
+                            <p>{newSumFun()}</p> 
                         </div>
-                    </div>                    
+                        <NavLink to='/order'>
+                            <button type="button" className={styles.buy}>Перейти к оформлению</button>
+                        </NavLink>                                       
+                    </div>               
                 </div>
             </div>            
         </div>

@@ -13,17 +13,17 @@ const Nav = () => {
             <NavLink to = '/catalog-mixers'>
                 Смесители
             </NavLink>
-            <NavLink to = '/accessories'>
-                Аксессуары
-            </NavLink>
             <NavLink to = '/catalog-plate'>
                 Плиты
             </NavLink>
-            <NavLink to = '/washbasins'>
-                Умывальники
+            <NavLink to = '/info'>
+                Информация
+            </NavLink>            
+            <NavLink to = '/sign-in'>
+                Войти в кабинет
             </NavLink>
             <NavLink to = '/sign-up'>
-                SignUp
+                Регистрация
             </NavLink>
         </nav>
     );

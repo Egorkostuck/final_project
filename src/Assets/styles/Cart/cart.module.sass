@@ -26,6 +26,16 @@
             img
                 width: 160px
                 margin-right: 53px
+            .infoGoods
+                height: 100%
+                display: flex
+                flex-direction: column
+                align-content: space-between
+                .name
+                    margin-top: 40px
+                .coast
+                    margin-top: auto
+                    margin-bottom: 40px
             .countContainer
                 margin-left: auto
                 padding: 0
@@ -62,9 +72,11 @@
                         width: 40px
                         height: 70px
                         text-align: center 
-                        displa: flex
+                        display: flex
                         align-items: center                      
                         background-color: $gray-ultra-light
+                        p
+                            width: 100%
         .checkContainer
             width: 380px
             height: 450px
@@ -83,11 +95,14 @@
                         display: flex
                         justify-content: space-between
                         align-items: center
+                        margin-top: 20px
                         .checkCoast
                             font-weight: 500
                         .checkDiscount
                             font-weight: 500
                             color: $red 
+                        &:nth-child(2)
+                            margin-bottom: 20px              
                 .newSum
                     display: flex
                     justify-content: space-between
@@ -97,5 +112,18 @@
                     h5,
                     p
                         margin: 0
-                
+                .buy
+                    width: 100%
+                    height: 70px
+                    font-family: Montserrat
+                    font-size: 16px
+                    line-height: 20px
+                    background-color: $red
+                    color: $white
+                    border: none
+                    outline: none
+                    margin-top: 60px
+                    &:hover
+                        background-color: #2f9e01
+
 

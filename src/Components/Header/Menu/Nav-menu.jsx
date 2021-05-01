@@ -13,6 +13,9 @@ const NavMenu = ({setOpen}) => {
             <NavLink onClick={() => close()} to='/#block-catalog'>
                 <p>Каталог</p>
             </NavLink>
+            <NavLink onClick={() => close()} to='/info'>
+                <p>Информация</p>
+            </NavLink>
             <NavLink onClick={() => close()} to='/sign-up'>
                 <p>Регистрация</p>
             </NavLink>

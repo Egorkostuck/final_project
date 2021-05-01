@@ -31,7 +31,7 @@ body {
   padding-top: 300px;
   display: grid;
   grid-template-columns: repeat(3, 383px);
-  grid-template-rows: repeat(2, 440px);
+  grid-template-rows: repeat(auto, 440px);
   grid-column-gap: 25px;
   grid-row-gap: 25px;
 }

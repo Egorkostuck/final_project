@@ -15,6 +15,10 @@ import 'react-toastify/dist/ReactToastify.css';
 import SignUp from './Components/SignUp/SignUp';
 import SignIn from './Components/SignIn/SignIn';
 import Contact from './Components/Contact/ContactComp';
+import Ordering from  './Components/Ordering/Ordering';
+import Information from './Components/Information/Information';
+import Politics from './Components/Politics/Politics';
+import Partners from './Components/Partners/Partners';
 
 function App() {
 
@@ -72,6 +76,18 @@ function App() {
             </Route>
             <Route exact path='/cart'>
               <Cart />
+            </Route>
+            <Route path='/order'>
+              <Ordering successToast={successToast} />
+            </Route>
+            <Route path='/info'>
+              <Information />
+            </Route>
+            <Route path='/info-buyer'>
+              <Politics />
+            </Route>
+            <Route path='/info-partners'>
+              <Partners />
             </Route>
           </Switch>
         </section>   
