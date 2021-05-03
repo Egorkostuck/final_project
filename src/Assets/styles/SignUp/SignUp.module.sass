@@ -1,35 +1,25 @@
 @import './../../../App.sass'
-.containerButtonSignUp 
-    display: flex
-    justify-content: flex-end
-    .buttonSignUp
-        width: 80px
-        height: 30px
-        margin-top: 20px
-        margin-right: 50px
-        font-weight: bold
-        background-color: $gray-ultra-light
-        color: $grafit
-        border: none
-        outline: none
-        box-sizing: border-box
-        text-decoration: none
-        z-index: 100
+
 .containerForm 
     width: 400px
-    height: 400px
+    height: 350px
     background-color: $gray-light
     box-shadow: 2px 2px 5px rgba(10, 46, 82, 0.16), -8px -8px 40px rgba(255, 255, 255, 0.56), 8px 8px 15px rgba(0, 0, 0, 0.17);
     border-radius: 5px
     display: flex
     flex-direction: column
     align-items: center
-    margin: 200px auto 100px auto
+    margin: 250px auto 100px auto
+    position: relative
+    @media screen and ( max-width:  401px)
+        width: calc(100% - 20px)
     .titleLogin
         margin-top: 60px
         margin-bottom: 40px
         font-size: 36px
         color: $grafit
+        @media screen and ( max-width:  401px)
+            font-size: 30px
     .titleLoginUp
         margin-top: 40px
         margin-bottom: 20px
@@ -42,19 +32,43 @@
         margin-top: 20px
         border: 3px
         outline: none
-    .errors
+    .errors1,
+    .errors2,
+    .errors3,
+    .errors4,
+    .errors5
         margin: 0
         font-size: 12px
         font-weight: 500
         color: red
-    .errors:frist-child
-        margin: 0
-    .buttonLogin 
+        position: absolute
+        top: 139px
+    .errors2
+        top: 195px
+    .errors3
+        top: 251px
+    .errors4
+        top: 179px
+    .errors5
+        top: 235px
+    .buttonLogin,
+    .buttonLoginUp
         width: 80px
         height: 30px
         font-weight: bold
+        font-family: 'Montserrat'
         margin-top: 20px
         box-sizing: border-box
-.toast 
+        outline: none 
+        &:hover
+            background-color: $red
+            color: $white
+            border: 1px solid $red
+            border-radius: 2px
+    .buttonLoginUp
+        width: 173px
+        height: 35px
+.toast
+    font-family: 'Montserrat'
     font-size: 18px
     

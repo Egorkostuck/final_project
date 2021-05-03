@@ -5,7 +5,7 @@
 
 #root {
   width: 100%;
-  max-width: 100vw;
+  min-width: 100vw;
   display: grid;
   align-content: space-between;
   box-sizing: border-box;
@@ -31,6 +31,30 @@ body {
   padding-top: 250px;
 }
 
+@media screen and (max-width: 1022px) {
+  .cartContainer {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .cartContainer {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 552px) {
+  .cartContainer {
+    padding-top: 200px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .cartContainer {
+    width: 100%;
+  }
+}
+
 .cartContainer h3 {
   font-size: 48px;
   font-weight: bold;
@@ -38,11 +62,25 @@ body {
   margin-bottom: 60px;
 }
 
+@media screen and (max-width: 552px) {
+  .cartContainer h3 {
+    margin-bottom: 20px;
+  }
+}
+
 .cartContainer .cartBlock {
   width: 100%;
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-column-gap: 50px;
+}
+
+@media screen and (max-width: 1160px) {
+  .cartContainer .cartBlock {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-row-gap: 30px;
+  }
 }
 
 .cartContainer .cartBlock .goods {
@@ -55,9 +93,25 @@ body {
   box-sizing: border-box;
 }
 
+@media screen and (max-width: 552px) {
+  .cartContainer .cartBlock .goods {
+    position: relative;
+    height: 250px;
+  }
+}
+
 .cartContainer .cartBlock .goods img {
   width: 160px;
   margin-right: 53px;
+}
+
+@media screen and (max-width: 552px) {
+  .cartContainer .cartBlock .goods img {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    margin: 0;
+  }
 }
 
 .cartContainer .cartBlock .goods .infoGoods {
@@ -71,9 +125,29 @@ body {
   margin-top: 40px;
 }
 
+@media screen and (max-width: 552px) {
+  .cartContainer .cartBlock .goods .infoGoods .name {
+    width: 191px;
+    margin-top: 0;
+    position: absolute;
+    top: 170px;
+    left: 10px;
+    line-height: 18px;
+  }
+}
+
 .cartContainer .cartBlock .goods .infoGoods .coast {
   margin-top: auto;
   margin-bottom: 40px;
+}
+
+@media screen and (max-width: 552px) {
+  .cartContainer .cartBlock .goods .infoGoods .coast {
+    margin-top: 0;
+    position: absolute;
+    top: 207px;
+    left: 10px;
+  }
 }
 
 .cartContainer .cartBlock .goods .countContainer {
@@ -83,6 +157,14 @@ body {
   flex-direction: column;
   align-content: space-around;
   justify-content: flex-end;
+}
+
+@media screen and (max-width: 552px) {
+  .cartContainer .cartBlock .goods .countContainer {
+    height: 100%;
+    justify-content: space-between;
+    padding: 10px 10px 10px 0;
+  }
 }
 
 .cartContainer .cartBlock .goods .countContainer .icon {
@@ -140,6 +222,18 @@ body {
   height: 450px;
   color: #333333;
   background-color: #ECECEC;
+}
+
+@media screen and (max-width: 1212px) {
+  .cartContainer .cartBlock .checkContainer {
+    width: 340px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .cartContainer .cartBlock .checkContainer {
+    width: 320px;
+  }
 }
 
 .cartContainer .cartBlock .checkContainer .checkContent {

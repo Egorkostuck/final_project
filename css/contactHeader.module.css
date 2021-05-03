@@ -5,7 +5,7 @@
 
 #root {
   width: 100%;
-  max-width: 100vw;
+  min-width: 100vw;
   display: grid;
   align-content: space-between;
   box-sizing: border-box;
@@ -40,6 +40,18 @@ body {
   margin-right: 70px;
 }
 
+@media screen and (max-width: 1013px) {
+  .contactHeaderContainer .sityBlock p:first-child {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 752px) {
+  .contactHeaderContainer .sityBlock p:first-child select {
+    display: none;
+  }
+}
+
 .contactHeaderContainer .sityBlock a {
   text-decoration: none;
   color: #ffffff;
@@ -70,6 +82,12 @@ body {
   margin-right: 70px;
 }
 
+@media screen and (max-width: 1013px) {
+  .contactHeaderContainer .numberBlock p {
+    margin-right: 20px;
+  }
+}
+
 .contactHeaderContainer .numberBlock a {
   color: white;
   text-decoration: none;
@@ -78,5 +96,11 @@ body {
 
 .contactHeaderContainer .numberBlock a:hover {
   color: #AD2131;
+}
+
+@media screen and (max-width: 752px) {
+  .contactHeaderContainer .numberBlock a {
+    display: none;
+  }
 }
 /*# sourceMappingURL=contactHeader.module.css.map */

@@ -8,4 +8,10 @@
   position: absolute;
   top: 30px;
 }
+
+@media screen and (max-width: 450px) {
+  .container-logo .header-holding {
+    display: none;
+  }
+}
 /*# sourceMappingURL=logo.css.map */

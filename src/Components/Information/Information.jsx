@@ -10,7 +10,6 @@ const Information = () => {
         <div className={classes.informationSection}>
             <h3>Информация</h3>
             <div className={classes.informationContainer}>
-
                 <span>«Реджинокс Риф Холдинг» является эксклюзивным представителем в<br/>России нидерландской Компании «REGINOX».</span>
                 <div className={classes.informationContent}>
                     <div className={classes.informationBlock}>

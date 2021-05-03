@@ -2,21 +2,46 @@
 .orderSection
     width: 70%
     margin:  250px auto 100px auto
+    @media screen and ( max-width: 1022px)
+        width: 85%
+    @media screen and ( max-width: 810px)
+        width: 90%
+    @media screen and ( max-width: 446px)
+        width: calc(100% - 20px)
+    @media screen and ( max-width: 390px)
+        width: calc(100% - 5px)
     h3
         font-weight: bold
         font-size: 48px
         line-height: 59px
         margin-bottom: 40px
+        @media screen and ( max-width: 390px)
+            font-size: 38px
+            line-height: 47px
     .contentOrder
         display: flex
         justify-content: space-between
+        @media screen and ( max-width: 860px)
+            flex-direction: column
         .orderContainer
             width: 60%
+            @media screen and ( max-width: 1404px)
+                width: 55%
+            @media screen and ( max-width: 810px)
+                width: 50%
+            @media screen and ( max-width: 860px)
+                width: 80%
+                margin: 0 auto
+            @media screen and ( max-width: 556px)
+                width: 100%
             h5
                 font-weight: 800
                 font-size: 18px
                 line-height: 120%
-                margin-bottom: 24px 
+                margin-bottom: 24px
+                word-wrap: break-word
+                @media screen and ( max-width: 360px)
+                    width: 320px
             .typeBuyer
                 border-bottom: 1px solid $med
                 box-sizing: border-box
@@ -39,6 +64,14 @@
                         box-sizing: border-box
                         outline: none
                         margin-bottom: 24px
+                        @media screen and ( max-width: 1404px)
+                            width: 500px
+                        @media screen and ( max-width: 1256px)
+                            width: 450px
+                        @media screen and ( max-width: 1176px)
+                            width: 400px
+                        @media screen and ( max-width: 422px)
+                            width: 310px
             .deliveryBlock
                 margin-top: 56px
                 border-bottom: 1px solid $med
@@ -51,6 +84,14 @@
                     justify-content: space-between
                     align-items: center
                     background-color: $gray-light
+                    @media screen and ( max-width: 1404px)
+                        width: 500px
+                    @media screen and ( max-width: 1256px)
+                        width: 450px
+                    @media screen and ( max-width: 1176px)
+                        width: 400px
+                    @media screen and ( max-width: 422px)
+                        width: 310px
                     &:last-child
                         margin-top: 20px
                         margin-bottom: 32px
@@ -82,6 +123,14 @@
                     box-sizing: border-box
                     outline: none
                     margin-bottom: 24px
+                    @media screen and ( max-width: 1404px)
+                        width: 500px
+                    @media screen and ( max-width: 1256px)
+                        width: 450px
+                    @media screen and ( max-width: 1176px)
+                        width: 400px
+                    @media screen and ( max-width: 422px)
+                        width: 310px
             .textFieldForm .textField
                 width: 600px
                 height: 70px
@@ -92,13 +141,28 @@
                 box-sizing: border-box
                 outline: none
                 margin-bottom: 24px
+                @media screen and ( max-width: 1404px)
+                    width: 500px
+                @media screen and ( max-width: 1256px)
+                    width: 450px
+                @media screen and ( max-width: 1176px)
+                    width: 400px
+                @media screen and ( max-width: 422px)
+                    width: 310px
         .checkContainer
                 width: 380px
                 height: 517px
                 color: $grafit
                 background-color: $gray-ultra-light
+                @media screen and ( max-width: 860px)
+                    margin: 0 auto
+                @media screen and ( max-width: 390px)
+                    width: 310px
+                    margin: 0
                 .checkContent
                     margin: 42px 24px 42px 32px
+                    @media screen and ( max-width: 390px)
+                        margin-top: 25px
                     h5
                         font-weight: 800
                         font-size: 22px 

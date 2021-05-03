@@ -94,9 +94,9 @@ const Ordering = ({successToast}) => {
                     <div className={classes.typeBuyer}>
                         <h5>Тип плательщика</h5>
                         <FormControl  component="fieldset">
-                            <RadioGroup aria-label="type" name="gender1" value={value} onChange={handleChange}  row>
-                                <FormControlLabel className='radio' value="Individual" control={<Radio />} label="Физическое лицо" />
-                                <FormControlLabel value="legal" control={<Radio />} label="Юридическое лицо" />
+                            <RadioGroup aria-label="gender" name="gender1" value={value} onChange={handleChange}  row>
+                                <FormControlLabel name="gender1" value="Individual" control={<Radio />} label="Физическое лицо" />
+                                <FormControlLabel name="gender1" value="legal" control={<Radio />} label="Юридическое лицо" />
                             </RadioGroup>
                         </FormControl>
                     </div>
@@ -113,10 +113,10 @@ const Ordering = ({successToast}) => {
                             <p className={classes.errors}>{errors.name && errors.name.message}</p>
                         </form>
                         <h5>Магазин который вас обслуживает</h5>
-                        <FormControl  component="fieldset">
-                            <RadioGroup aria-label="type" name="address" value={value} onChange={addressChange}  row>
-                                <FormControlLabel  value="pushkinskaya" control={<Radio />} label="ст.м. Пушкинская" />
-                                <FormControlLabel value="nemiga" control={<Radio />} label="ст.м. Немига" />
+                        <FormControl component="fieldset">
+                            <RadioGroup aria-label="address" name="address1" value={value}  onChange={addressChange} row>
+                                <FormControlLabel name='address1' value="pushkinskaya" control={<Radio />} label="ст.м. Пушкинская" />
+                                <FormControlLabel name='address1' value="nemiga" control={<Radio />} label="ст.м. Немига" />
                             </RadioGroup>
                         </FormControl>
                     </div>

@@ -79,8 +79,7 @@ const Cart = () => {
                             <div className={styles.countContainer}> 
                                 <div className={styles.icon}>
                                     <i onClick={() => deleteGoodsInCart(item.id)} className="fas fa-times"></i>
-                                </div>                              
-                                                                
+                                </div>                                                            
                                 <div className={styles.countBlock}>
                                     <button  onClick={() => deleteCountGoods(item)} type='button'>-</button>
                                     <div className={styles.count}>

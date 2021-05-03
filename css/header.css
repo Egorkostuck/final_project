@@ -13,10 +13,34 @@
   margin-top: 15px;
 }
 
+@media screen and (max-width: 1055px) {
+  .header-container .header-section {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .header-container .header-section {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .header-container .header-section {
+    width: 100%;
+  }
+}
+
 .header-container .header-section .section-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
+}
+
+@media screen and (max-width: 895px) {
+  .header-container .header-section .section-menu {
+    margin-bottom: 25px;
+  }
 }
 /*# sourceMappingURL=header.css.map */

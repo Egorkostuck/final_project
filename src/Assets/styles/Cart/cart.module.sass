@@ -5,16 +5,30 @@
     max-width: 1280px
     margin: 0 auto
     padding-top: 250px
+    @media screen and ( max-width: 1022px)
+        width: 85%
+    @media screen and ( max-width: 810px)
+        width: 90%
+    @media screen and ( max-width: 552px)
+        padding-top: 200px
+    @media screen and ( max-width: 375px)
+        width: 100%
     h3  
         font-size: 48px
         font-weight: bold
         text-transform: uppercase
         margin-bottom: 60px
+        @media screen and ( max-width: 552px)
+            margin-bottom: 20px
     .cartBlock
         width: 100%
         display: grid
         grid-template-columns: 2fr 1fr
         grid-column-gap: 50px
+        @media screen and ( max-width: 1160px)
+            grid-template-columns: 1fr
+            grid-template-rows: 1fr
+            grid-row-gap: 30px
         .goods
             width: 100%
             height: 210px
@@ -23,19 +37,40 @@
             justify-content: start
             border-bottom: 1px solid $gray-light
             box-sizing: border-box
+            @media screen and ( max-width: 552px)
+                position: relative
+                height: 250px
             img
                 width: 160px
                 margin-right: 53px
+                @media screen and ( max-width: 552px)
+                    position: absolute
+                    top: 15px
+                    left: 10px
+                    margin: 0
             .infoGoods
                 height: 100%
                 display: flex
                 flex-direction: column
                 align-content: space-between
+                .infoGoods
                 .name
                     margin-top: 40px
+                    @media screen and ( max-width: 552px)
+                        width: 191px
+                        margin-top: 0
+                        position: absolute
+                        top: 170px
+                        left: 10px
+                        line-height: 18px
                 .coast
                     margin-top: auto
                     margin-bottom: 40px
+                    @media screen and ( max-width: 552px)
+                        margin-top: 0
+                        position: absolute
+                        top: 207px
+                        left: 10px
             .countContainer
                 margin-left: auto
                 padding: 0
@@ -43,6 +78,10 @@
                 flex-direction: column
                 align-content: space-around
                 justify-content: flex-end
+                @media screen and ( max-width: 552px)
+                    height: 100%
+                    justify-content: space-between
+                    padding: 10px 10px 10px 0
                 .icon
                     text-align: end
                     i
@@ -82,6 +121,10 @@
             height: 450px
             color: $grafit
             background-color: $gray-ultra-light
+            @media screen and ( max-width: 1212px)
+                width: 340px
+            @media screen and ( max-width: 340px)
+                width: 320px
             .checkContent
                 margin: 42px 24px 42px 32px
                 h5

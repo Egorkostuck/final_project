@@ -6,20 +6,49 @@
     align-items: center
     padding-top: 300px
     display: grid
+    justify-content: center
     grid-template-columns: repeat(3, 383px)
     grid-template-rows: repeat(auto, 440px)
     grid-column-gap: 25px
     grid-row-gap: 25px
+    @media screen and ( max-width: 1753px)
+        grid-template-columns: repeat(2, 383px)
+        grid-row-gap: 2.0em
+    @media screen and ( max-width: 1150px)
+        grid-template-columns: repeat(2, 335px)
+        grid-row-gap: 2.0em
+    @media screen and ( max-width: 1022px)
+        width: 85%
+    @media screen and ( max-width: 895px)
+        padding-top: 200px
+    @media screen and ( max-width: 840px)
+        grid-column-gap: 20px
+        grid-row-gap: 1.0em
+    @media screen and ( max-width: 810px)
+        width: 90%
+    @media screen and ( max-width: 375px)
+        width: 100% 
+    @media screen and ( max-width: 776px)
+        grid-template-columns: repeat(1, 335px)
+        grid-row-gap: 2.0em
     .catalogBlock
         width: 383px
         height: 440px
         background-color: $gray-light
         text-align: start
         position: relative
+        @media screen and ( max-width: 1150px)
+            width: 335px
+        @media screen and ( max-width: 335px)
+            width: 320px
         .sink
             width: 315px
             height: 180px
             margin: 70px 34px 0 34px
+            @media screen and ( max-width: 1150px)
+                margin: 70px 10px 0 10px
+            @media screen and ( max-width: 340px)
+                margin: 70px 0px 0 0px            
         .name
             font-weight: 800
             font-size: 18px
@@ -46,3 +75,6 @@
             display: flex
     .toast
         font-size: 18px
+
+
+    

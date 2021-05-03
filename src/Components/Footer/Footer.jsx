@@ -5,7 +5,7 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import classes from './../../Assets/styles/Footer/footer.module.sass';
-import { NavLink } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 import terSteege from './../../Assets/img/logo/logo_TSG.png';
 import holdings from './../../Assets/img/logo/PRHolding_logo.png';
 import image from './../../Assets/img/logo/logo_block.png';
@@ -14,13 +14,13 @@ import 'font-awesome/css/font-awesome.min.css';
 const Footer = () => {
     let DATACOMPANY = [
         {tittle: 'Почему мы', path: '/why-are-we'},
-        {tittle: 'Каталоги', path: '/catalogs'},
+        {tittle: 'Каталоги', path: '/'},
         {tittle: 'Контакты', path: '/contact'}
     ];
     let DATACATALOG = [
-        {tittle: 'Мойки', path: '/sinks'},
-        {tittle: 'Смесители', path: '/mixers'},
-        {tittle: 'Аксессуары', path: '/accessories'}
+        {tittle: 'Мойки', path: '/catalog-sink'},
+        {tittle: 'Смесители', path: '/catalog-mixer'},
+        {tittle: 'Плиты', path: '/catalog-plate'}
     ];
     let DATABRANDS = [
         {tittle: 'Reginox', path: '/reginox'},
@@ -65,7 +65,7 @@ const Footer = () => {
                     <AccordionDetails>
                         <Typography>
                             {DATABRANDS.map((item, index) => (
-                                <NavLink className = {classes.itemLink} key = {index} to = {item.path}>
+                                <NavLink exact className = {classes.itemLink} key = {index} to = {item.path}>
                                     <p>{item.tittle}</p>
                                 </NavLink>
                             ))}

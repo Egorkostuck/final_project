@@ -1,21 +1,9 @@
 import React, {useState} from 'react';
 import classes from './../../../Assets/styles/Header/contactHeader.module.sass';
 import {NavLink} from 'react-router-dom';
-// import {useSelector, useDispatch} from 'react-redux';
-// import {changeCity} from './../../../State/Action';
 
 const ContactHeader = () => {
-    // const [city, setCity] = useState('Минск');
-    // const stateContact = useSelector(state => state.contactReducer.contact),
-    //     dispatch = useDispatch();
     
-    // console.log(stateContact);
-    // dispatch(changeCity('Минск'));
-    // const switchCity = (event) => {
-    //     console.log(event.currentTarget.value)
-    //     dispatch(changeCity(event.currentTarget.value));
-    // }
-    // console.log(stateContact + 'contact');
     return(
         <div className = {classes.contactHeaderContainer}>
             <div className = {classes.sityBlock}>
@@ -36,5 +24,5 @@ const ContactHeader = () => {
         </div>
     );
 }
-// onChange={switchCity}
+
 export default ContactHeader;

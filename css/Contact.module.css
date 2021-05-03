@@ -5,7 +5,7 @@
 
 #root {
   width: 100%;
-  max-width: 100vw;
+  min-width: 100vw;
   display: grid;
   align-content: space-between;
   box-sizing: border-box;
@@ -35,6 +35,24 @@ body {
   margin: 250px auto 100px auto;
 }
 
+@media screen and (max-width: 1052px) {
+  .contactContainer .contactSection {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .contactContainer .contactSection {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .contactContainer .contactSection {
+    width: 100%;
+  }
+}
+
 .contactContainer .contactSection .titleContact {
   font-weight: bold;
   font-size: 48px;
@@ -48,8 +66,28 @@ body {
   justify-content: space-between;
 }
 
+@media screen and (max-width: 680px) {
+  .contactContainer .contactSection .contactBlock {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+}
+
 .contactContainer .contactSection .contactBlock .leftBlock {
   width: 60%;
+}
+
+@media screen and (max-width: 1024px) {
+  .contactContainer .contactSection .contactBlock .leftBlock {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .contactContainer .contactSection .contactBlock .leftBlock {
+    width: calc(100% - 20px);
+    margin: 0 auto;
+  }
 }
 
 .contactContainer .contactSection .contactBlock .leftBlock .contactCity {
@@ -79,6 +117,12 @@ body {
 .contactContainer .contactSection .contactBlock .leftBlock .infoContact {
   display: flex;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 1024px) {
+  .contactContainer .contactSection .contactBlock .leftBlock .infoContact {
+    flex-direction: column;
+  }
 }
 
 .contactContainer .contactSection .contactBlock .leftBlock .infoContact h5 {
@@ -114,6 +158,19 @@ body {
   height: 622px;
   background-color: #ECECEC;
   padding: 40px 36px;
+}
+
+@media screen and (max-width: 1024px) {
+  .contactContainer .contactSection .contactBlock .feedBackContainer {
+    width: 55%;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .contactContainer .contactSection .contactBlock .feedBackContainer {
+    width: calc( 100% - 20px);
+    margin: 25px auto 0 auto;
+  }
 }
 
 .contactContainer .contactSection .contactBlock .feedBackContainer form {

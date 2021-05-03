@@ -5,7 +5,7 @@
 
 #root {
   width: 100%;
-  max-width: 100vw;
+  min-width: 100vw;
   display: grid;
   align-content: space-between;
   box-sizing: border-box;
@@ -30,10 +30,63 @@ body {
   align-items: center;
   padding-top: 300px;
   display: grid;
+  justify-content: center;
   grid-template-columns: repeat(3, 383px);
   grid-template-rows: repeat(auto, 440px);
   grid-column-gap: 25px;
   grid-row-gap: 25px;
+}
+
+@media screen and (max-width: 1753px) {
+  .catalogContainer {
+    grid-template-columns: repeat(2, 383px);
+    grid-row-gap: 2.0em;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .catalogContainer {
+    grid-template-columns: repeat(2, 335px);
+    grid-row-gap: 2.0em;
+  }
+}
+
+@media screen and (max-width: 1022px) {
+  .catalogContainer {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 895px) {
+  .catalogContainer {
+    padding-top: 200px;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .catalogContainer {
+    grid-column-gap: 20px;
+    grid-row-gap: 1.0em;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .catalogContainer {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .catalogContainer {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 776px) {
+  .catalogContainer {
+    grid-template-columns: repeat(1, 335px);
+    grid-row-gap: 2.0em;
+  }
 }
 
 .catalogContainer .catalogBlock {
@@ -44,10 +97,34 @@ body {
   position: relative;
 }
 
+@media screen and (max-width: 1150px) {
+  .catalogContainer .catalogBlock {
+    width: 335px;
+  }
+}
+
+@media screen and (max-width: 335px) {
+  .catalogContainer .catalogBlock {
+    width: 320px;
+  }
+}
+
 .catalogContainer .catalogBlock .sink {
   width: 315px;
   height: 180px;
   margin: 70px 34px 0 34px;
+}
+
+@media screen and (max-width: 1150px) {
+  .catalogContainer .catalogBlock .sink {
+    margin: 70px 10px 0 10px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .catalogContainer .catalogBlock .sink {
+    margin: 70px 0px 0 0px;
+  }
 }
 
 .catalogContainer .catalogBlock .name {

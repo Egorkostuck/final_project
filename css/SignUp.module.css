@@ -5,7 +5,7 @@
 
 #root {
   width: 100%;
-  max-width: 100vw;
+  min-width: 100vw;
   display: grid;
   align-content: space-between;
   box-sizing: border-box;
@@ -24,36 +24,23 @@ body {
   box-sizing: border-box;
 }
 
-.containerButtonSignUp {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.containerButtonSignUp .buttonSignUp {
-  width: 80px;
-  height: 30px;
-  margin-top: 20px;
-  margin-right: 50px;
-  font-weight: bold;
-  background-color: #ECECEC;
-  color: #333333;
-  border: none;
-  outline: none;
-  box-sizing: border-box;
-  text-decoration: none;
-  z-index: 100;
-}
-
 .containerForm {
   width: 400px;
-  height: 400px;
+  height: 350px;
   background-color: #DCDCDC;
   box-shadow: 2px 2px 5px rgba(10, 46, 82, 0.16), -8px -8px 40px rgba(255, 255, 255, 0.56), 8px 8px 15px rgba(0, 0, 0, 0.17);
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 200px auto 100px auto;
+  margin: 250px auto 100px auto;
+  position: relative;
+}
+
+@media screen and (max-width: 401px) {
+  .containerForm {
+    width: calc(100% - 20px);
+  }
 }
 
 .containerForm .titleLogin {
@@ -61,6 +48,12 @@ body {
   margin-bottom: 40px;
   font-size: 36px;
   color: #333333;
+}
+
+@media screen and (max-width: 401px) {
+  .containerForm .titleLogin {
+    font-size: 30px;
+  }
 }
 
 .containerForm .titleLoginUp {
@@ -79,26 +72,61 @@ body {
   outline: none;
 }
 
-.containerForm .errors {
+.containerForm .errors1,
+.containerForm .errors2,
+.containerForm .errors3,
+.containerForm .errors4,
+.containerForm .errors5 {
   margin: 0;
   font-size: 12px;
   font-weight: 500;
   color: red;
+  position: absolute;
+  top: 139px;
 }
 
-.containerForm .errors:frist-child {
-  margin: 0;
+.containerForm .errors2 {
+  top: 195px;
 }
 
-.containerForm .buttonLogin {
+.containerForm .errors3 {
+  top: 251px;
+}
+
+.containerForm .errors4 {
+  top: 179px;
+}
+
+.containerForm .errors5 {
+  top: 235px;
+}
+
+.containerForm .buttonLogin,
+.containerForm .buttonLoginUp {
   width: 80px;
   height: 30px;
   font-weight: bold;
+  font-family: 'Montserrat';
   margin-top: 20px;
   box-sizing: border-box;
+  outline: none;
+}
+
+.containerForm .buttonLogin:hover,
+.containerForm .buttonLoginUp:hover {
+  background-color: #AD2131;
+  color: #ffffff;
+  border: 1px solid #AD2131;
+  border-radius: 2px;
+}
+
+.containerForm .buttonLoginUp {
+  width: 173px;
+  height: 35px;
 }
 
 .toast {
+  font-family: 'Montserrat';
   font-size: 18px;
 }
 /*# sourceMappingURL=SignUp.module.css.map */

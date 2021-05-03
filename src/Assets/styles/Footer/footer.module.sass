@@ -3,9 +3,9 @@
 .footerContainer
     background-color: $white
     width: 100%
-    // position: absolute
-    // bottom: 0
-    // left: 0
+    position: relative
+    bottom: 0
+    left: 0
     height: auto
     z-index: 2
     .accordionContainer
@@ -17,6 +17,14 @@
         justify-content: space-around
         padding-top: 45px
         padding-bottom: 65px
+        @media screen and ( max-width: 1022px)
+            width: 85%
+        @media screen and ( max-width: 810px)
+            width: 90%
+            justify-content: center
+        @media screen and ( max-width: 650px)
+            width: 90%
+            flex-direction: column
         .accordionBlock
             border-color: $white
             background-color: $white
@@ -38,12 +46,19 @@
                 text-decoration: none
                 font-weight: 500
                 font-size: 16px
+                &:hover
+                    color: $red
+                p
+                    margin-bottom: 15px
     .socialNetworksSection
         width: 100%
         height: 225px
         background-color: $gray-ultra-light
         display: flex
         align-items: flex-end
+        @media screen and ( max-width:  563px)
+            height: auto
+            flex-direction: column             
         .socialContainer
             width: 70%
             max-width: 1280px
@@ -54,10 +69,28 @@
             flex-direction: row
             justify-content: space-between            
             align-items: flex-start
+            @media screen and ( max-width: 1169px)
+                width: 85%
+            @media screen and ( max-width: 950px)
+                width: 90%
+            @media screen and ( max-width:  750px)
+                width: 100%
+                flex-direction: column 
+                justify-content: center
+                align-items: center
+            @media screen and ( max-width: 375px)
+                width: 100%
+                flex-direction: column
+            .corporationBlock
+                @media screen and ( max-width:  750px)
+                    margin-bottom: 15px
             .corporationBlock img:first-child
-                margin-right: 60px
+                margin-right: 60px                
             .corporationBlock img:nth-child(2)
                 width: 87px
+            .socialBlock
+                @media screen and ( max-width:  750px)
+                    margin-bottom: 15px
             .socialBlock a
                 color: $red
                 margin-right: 45px
@@ -74,6 +107,13 @@
         font-weight: 500
         font-size: 12px
         color: $gray
+        @media screen and ( max-width: 1022px)
+            width: 85%
+        @media screen and ( max-width: 810px)
+            width: 90%
+        @media screen and ( max-width: 375px)
+            width: 100%
+            flex-direction: column
         div
             margin: auto 0
 

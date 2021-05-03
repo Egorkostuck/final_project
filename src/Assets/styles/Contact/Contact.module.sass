@@ -6,6 +6,12 @@
         width: 70%
         max-width: 1280px
         margin: 250px auto 100px auto
+        @media screen and ( max-width: 1052px)
+            width: 85%
+        @media screen and ( max-width: 810px)
+            width: 90%
+        @media screen and ( max-width: 375px)
+            width: 100%
         .titleContact
             font-weight: bold
             font-size: 48px
@@ -15,8 +21,16 @@
             width: 100%
             display: flex
             justify-content: space-between
+            @media screen and ( max-width: 680px)
+                flex-direction: column
+                margin: 0 auto
             .leftBlock
                 width: 60%
+                @media screen and ( max-width: 1024px)
+                    width: 45%
+                @media screen and ( max-width: 680px)
+                    width: calc(100% - 20px)
+                    margin: 0 auto
                 .contactCity
                     display: flex
                     padding-bottom: 16px
@@ -34,6 +48,8 @@
                 .infoContact
                     display: flex
                     justify-content: space-between
+                    @media screen and ( max-width: 1024px)
+                        flex-direction: column
                     h5
                         font-weight: 500
                         font-size: 24px
@@ -57,6 +73,11 @@
                 height: 622px
                 background-color: $gray-ultra-light
                 padding: 40px 36px
+                @media screen and ( max-width: 1024px)
+                    width: 55%
+                @media screen and ( max-width: 680px)
+                    width: calc( 100% - 20px )
+                    margin: 25px auto 0 auto
                 form
                     display: flex
                     flex-direction: column

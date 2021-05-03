@@ -31,7 +31,6 @@ const Slider = () => {
             spaceBetween={0}
             slidesPerView={1}
             pagination={{ 
-                // el: '.swiper-pagination',
                 clickable: true }}
             autoplay={{
                 delay: 5500,
