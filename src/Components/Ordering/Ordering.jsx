@@ -172,7 +172,7 @@ const Ordering = ({successToast}) => {
                         </div>
                         <div className={classes.newSum}>
                             <h5>Итого</h5> 
-                            <p>{chequeChange.newSum}</p> 
+                            <p>{chequeChange.newSum} руб.</p> 
                         </div>
                         <button onClick={handleSubmit(onSubmit)} type='submit' form='dataUser' className={classes.buy}>Оплатить</button>
                         <p className={classes.action}>Нажимая кнопку отправить вы даете согласие на обработку пресональных данных</p>                                     

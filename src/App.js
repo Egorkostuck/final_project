@@ -93,7 +93,7 @@ function App() {
               <Partners />
             </Route>
             <Route path={'/goods'}>
-              <Goods />
+              <Goods successToast={successToast} />
             </Route>
             <Route path={'/success'}>
               <Success />

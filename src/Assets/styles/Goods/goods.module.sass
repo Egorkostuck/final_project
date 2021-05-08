@@ -1,3 +1,4 @@
+@import './../../../App.sass'
 .goodsContainer
     width: 70%
     max-width: 1280px
@@ -20,4 +21,72 @@
             font-weight: 500
             font-size: 24px
             line-height: 29px
-                
+        .countBlock
+            display: flex
+            width: 384px
+            height: 70px
+            align-items: center
+            background-color: $gray-ultra-light
+            margin-top: 31px
+            .countText
+                padding-right: 116px
+                padding-left: 24px             
+            button
+                width: 40px
+                height: 100%
+                border: none
+                outline: none
+                font-size: 18px
+                &:hover
+                    background-color: $gray-light
+            .count
+                width: 40px
+                height: 100%
+                text-align: center
+                display: flex
+                align-items: center
+                background-color: $gray-ultra-light
+                p
+                    width: 40px
+        .buttonBlock
+            // width: 384px
+            // height: 70px
+            margin-top: 32px
+            display: flex
+            button
+                width: 269px
+                height: 70px
+                background-color: $grafit
+                color: $white
+                text-align: start
+                padding-left: 24px
+                border: none
+                outline: none
+                box-sizing: border-box
+                font-family: Montserrat
+                font-style: normal
+                font-weight: normal
+                font-size: 16px
+                line-height: 20px
+                &:hover
+                    padding-left: 120px
+            .imgButton
+                width: 115px
+                height: 70px
+                background-color: $red
+                display: flex
+                justify-content: center
+                align-items: center
+                &:hover
+                    width: 269px
+                .iconButton
+                    width: 25px
+                    height: 25px
+                .textInCart
+                    display: none
+                    font-size: 16px
+                    line-height: 20px
+                    color: $white
+                    margin-left: 15px
+                &:hover .textInCart
+                    display: block

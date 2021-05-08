@@ -1,3 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  width: 100%;
+  min-width: 100vw;
+  display: grid;
+  align-content: space-between;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  min-height: calc(100vh - 187px - 472px);
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #333333;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
 .goodsContainer {
   width: 70%;
   max-width: 1280px;
@@ -29,5 +56,100 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 29px;
+}
+
+.goodsContainer .goodsInfo .countBlock {
+  display: flex;
+  width: 384px;
+  height: 70px;
+  align-items: center;
+  background-color: #ECECEC;
+  margin-top: 31px;
+}
+
+.goodsContainer .goodsInfo .countBlock .countText {
+  padding-right: 116px;
+  padding-left: 24px;
+}
+
+.goodsContainer .goodsInfo .countBlock button {
+  width: 40px;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 18px;
+}
+
+.goodsContainer .goodsInfo .countBlock button:hover {
+  background-color: #DCDCDC;
+}
+
+.goodsContainer .goodsInfo .countBlock .count {
+  width: 40px;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  background-color: #ECECEC;
+}
+
+.goodsContainer .goodsInfo .countBlock .count p {
+  width: 40px;
+}
+
+.goodsContainer .goodsInfo .buttonBlock {
+  margin-top: 32px;
+  display: flex;
+}
+
+.goodsContainer .goodsInfo .buttonBlock button {
+  width: 269px;
+  height: 70px;
+  background-color: #333333;
+  color: #ffffff;
+  text-align: start;
+  padding-left: 24px;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.goodsContainer .goodsInfo .buttonBlock button:hover {
+  padding-left: 120px;
+}
+
+.goodsContainer .goodsInfo .buttonBlock .imgButton {
+  width: 115px;
+  height: 70px;
+  background-color: #AD2131;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.goodsContainer .goodsInfo .buttonBlock .imgButton:hover {
+  width: 269px;
+}
+
+.goodsContainer .goodsInfo .buttonBlock .imgButton .iconButton {
+  width: 25px;
+  height: 25px;
+}
+
+.goodsContainer .goodsInfo .buttonBlock .imgButton .textInCart {
+  display: none;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  margin-left: 15px;
+}
+
+.goodsContainer .goodsInfo .buttonBlock .imgButton:hover .textInCart {
+  display: block;
 }
 /*# sourceMappingURL=goods.module.css.map */

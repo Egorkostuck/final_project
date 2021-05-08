@@ -8,11 +8,11 @@ export default (state=initialState, action) => {
                 goods: action.payload
             }
         case 'ADD_COUNT_IN_GOODS':
-            action.payload.count += 1;
-            debugger
+            // action.payload.count += 1;
+            // debugger
             return {
                 ...state,
-                goods: action.payload
+                goods: {...state.goods, count: action.payload}
             }
         case 'DELETE_COUNT_IN_GOODS': {
             action.payload.count -= 1;

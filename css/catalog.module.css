@@ -110,6 +110,10 @@ body {
   }
 }
 
+.catalogContainer .catalogBlock a {
+  text-decoration: none;
+}
+
 .catalogContainer .catalogBlock .sink {
   width: 315px;
   height: 180px;
