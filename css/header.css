@@ -1,11 +1,13 @@
-.header-container {
+.header-container,
+.header-container-active {
   width: 100%;
   position: absolute;
   background-color: #00000047;
   z-index: 100;
 }
 
-.header-container .header-section {
+.header-container .header-section,
+.header-container-active .header-section {
   width: 70%;
   max-width: 1280px;
   margin-left: auto;
@@ -14,24 +16,28 @@
 }
 
 @media screen and (max-width: 1055px) {
-  .header-container .header-section {
+  .header-container .header-section,
+  .header-container-active .header-section {
     width: 85%;
   }
 }
 
 @media screen and (max-width: 810px) {
-  .header-container .header-section {
+  .header-container .header-section,
+  .header-container-active .header-section {
     width: 90%;
   }
 }
 
 @media screen and (max-width: 375px) {
-  .header-container .header-section {
+  .header-container .header-section,
+  .header-container-active .header-section {
     width: 100%;
   }
 }
 
-.header-container .header-section .section-menu {
+.header-container .header-section .section-menu,
+.header-container-active .header-section .section-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,8 +45,13 @@
 }
 
 @media screen and (max-width: 895px) {
-  .header-container .header-section .section-menu {
+  .header-container .header-section .section-menu,
+  .header-container-active .header-section .section-menu {
     margin-bottom: 25px;
   }
+}
+
+.header-container-active {
+  background-color: #000000;
 }
 /*# sourceMappingURL=header.css.map */

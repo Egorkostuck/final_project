@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  width: 100%;
+  min-width: 100vw;
+  display: grid;
+  align-content: space-between;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  min-height: calc(100vh - 187px - 472px);
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #333333;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.successContainer {
+  width: 70%;
+  margin: 250px auto 0px auto;
+}
+
+.successContainer h3 {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 59px;
+  margin-bottom: 56px;
+}
+
+.successContainer .successBlock {
+  width: 70%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.successContainer .successBlock p {
+  margin-bottom: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.successContainer .successBlock a {
+  text-decoration: none;
+  color: #AD2131;
+  position: absolute;
+  left: 0;
+  top: 200px;
+}
+
+.successContainer .successBlock a:hover {
+  color: #333333;
+}
+
+.successContainer .successBlock img {
+  position: relative;
+  top: -100px;
+  left: 500px;
+}
+/*# sourceMappingURL=success.module.css.map */

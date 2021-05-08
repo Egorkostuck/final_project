@@ -1,0 +1,33 @@
+.goodsContainer {
+  width: 70%;
+  max-width: 1280px;
+  margin: 250px auto 40px auto;
+  display: flex;
+}
+
+.goodsContainer img {
+  width: 610px;
+  height: 610px;
+}
+
+.goodsContainer .goodsInfo h3 {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 59px;
+  margin-bottom: 32px;
+}
+
+.goodsContainer .goodsInfo .manufacturer {
+  margin-bottom: 63px;
+}
+
+.goodsContainer .goodsInfo .manufacturer p {
+  margin-bottom: 12px;
+}
+
+.goodsContainer .goodsInfo span {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+}
+/*# sourceMappingURL=goods.module.css.map */

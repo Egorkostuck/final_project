@@ -65,3 +65,15 @@ export function openGoods(item) {
     }
 }
 
+export function addCountInGoods(item) {
+    return {
+        type: 'ADD_COUNT_IN_GOODS',
+        payload: item
+    }
+}
+export function deleteCountInGoods(item) {
+    return {
+        type: 'DELETE_COUNT_IN_GOODS',
+        payload: item
+    }
+}
