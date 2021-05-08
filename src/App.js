@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.sass';
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import {HashRouter, Switch, Route} from 'react-router-dom';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
 import Dashboard from './Components/Dashboard/Dashboard';
@@ -19,6 +19,9 @@ import Ordering from  './Components/Ordering/Ordering';
 import Information from './Components/Information/Information';
 import Politics from './Components/Politics/Politics';
 import Partners from './Components/Partners/Partners';
+import ErrorPage from './Components/Error/ErrorPage';
+import Success from './Components/Success/Success';
+import Goods from './Components/Goods/Goods';
 
 function App() {
 
@@ -48,52 +51,61 @@ function App() {
 
   console.log(Store);
   return (
-    <BrowserRouter>
+    <HashRouter basename={process.env.PUBLIC_URL}>
       <Provider store={Store}>
         <Header />
         <section className='body'>
           <Switch>
-            <Route exact path = '/'>
+            <Route exact path ={'/'}>
               <Dashboard successToast={successToast}/>
             </Route>
-            <Route exact path='/sign-up'>
+            <Route exact path={'/sign-up'}>
               <SignUp successToast={successToast} errorToast={errorToast}/>
             </Route>
-            <Route exact path='/sign-in'>
+            <Route exact path={'/sign-in'}>
               <SignIn successToast={successToast} errorToast={errorToast}/>
             </Route>
-            <Route exact path='/catalog-sink'>
+            <Route exact path={'/catalog-sink'}>
               <Sink successToast={successToast}/>
             </Route>
-            <Route exact path='/catalog-mixers'>
+            <Route exact path={'/catalog-mixers'}>
               <Mixers successToast={successToast}/>
             </Route>
-            <Route exact path='/catalog-plate'>
+            <Route exact path={'/catalog-plate'}>
               <Plate successToast={successToast}/>
             </Route>
-            <Route exact path='/contact'>
+            <Route exact path={'/contact'}>
               <Contact successToast={successToast}/>
             </Route>
-            <Route exact path='/cart'>
+            <Route exact path={'/cart'}>
               <Cart />
             </Route>
-            <Route path='/order'>
+            <Route path={'/order'}>
               <Ordering successToast={successToast} />
             </Route>
-            <Route path='/info'>
+            <Route path={'/info'}>
               <Information />
             </Route>
-            <Route path='/info-buyer'>
+            <Route path={'/info-buyer'}>
               <Politics />
             </Route>
-            <Route path='/info-partners'>
+            <Route path={'/info-partners'}>
               <Partners />
+            </Route>
+            <Route path={'/goods'}>
+              <Goods />
+            </Route>
+            <Route path={'/success'}>
+              <Success />
+            </Route>
+            <Route path={'*'}>
+              <ErrorPage />
             </Route>
           </Switch>
         </section>   
       <Footer />
       </Provider>    
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

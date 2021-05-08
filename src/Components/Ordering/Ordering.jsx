@@ -9,6 +9,7 @@ import {useForm} from 'react-hook-form';
 import emailjs from 'emailjs-com';
 import TextField from '@material-ui/core/TextField';
 import {ToastContainer} from 'react-toastify';
+import { useHistory } from 'react-router-dom';
 
 const Ordering = ({successToast}) => {
     const [delivery, setDelivery] = useState(false);
@@ -16,6 +17,7 @@ const Ordering = ({successToast}) => {
     const [inputValue, setInputValue] = React.useState('');
     const [infoBuyer, setInfoBuyer] = useState({});
     const [value, setValue] = React.useState('Individual');
+    const [value2, setValue2] = React.useState('Metro');
     const [address, setAddress] = React.useState('nemiga');
     const checkObj = JSON.parse(localStorage.getItem('check'));
     const [chequeChange, setChequeChange] = useState(checkObj);
@@ -32,7 +34,7 @@ const Ordering = ({successToast}) => {
     console.log(INFOORDER);
 
     const validators = {
-        required: 'The field can not be empty'
+        required: 'Заполните поле'
     };  
 
     //тип лица (юр, физ)
@@ -70,9 +72,11 @@ const Ordering = ({successToast}) => {
     }
 
     //info buyer
+    const location = useHistory();
     const onSubmit = (item) => {
         setInfoBuyer(item);
         successToast('Ваш заказ успешно принят! Мы с вами свяжемся для подтверждения заказа!');
+        location.push('/success');
         console.log(item);
     }
     console.log(errors);
@@ -103,22 +107,22 @@ const Ordering = ({successToast}) => {
                     <div className={classes.infoBuyer}>
                         <h5>Информация о покупателе</h5>
                         <form className={classes.infoForm} onSubmit={handleSubmit(onSubmit)}>
-                            <input className={classes.infoInput} type="text" name="name" placeholder="ФИО" ref={register({...validators, minLength: {value: 2, message: 'The field cannot be empty'},maxLength: {value: 25, message: 'No more than 25 characters'}, pattern:{value: /[A-ZА-Я]{2,25}/i,  message: '2-25 symbol'} })}/>               
-                            <p className={classes.errors}>{errors.name && errors.name.message}</p>
-                            <input className={classes.infoInput} type="email" name="email" placeholder="email@example.com" ref={register({...validators, pattern:{value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,  message: 'Invalid email address'} })}/>               
-                            <p className={classes.errors}>{errors.email && errors.email.message}</p>
-                            <input className={classes.infoInput} type="tel" name="Mobile" placeholder="Номер телефона" ref={register({...validators, pattern:{value: /^([+]?[0-9\s-\(\)]{3,25})*$/i,  message: 'example: +375(29)111-11-11' } })}/>                
-                            <p className={classes.errors}>{errors.password && errors.password.message}</p>  
-                            <input className={classes.infoInput} type="text" name="address" placeholder="Адрес доставки" ref={register({...validators, minLength: {value: 2, message: 'The field cannot be empty'},maxLength: {value: 50, message: 'No more than 25 characters'} })}/>               
-                            <p className={classes.errors}>{errors.name && errors.name.message}</p>
+                            <input className={classes.infoInput} type="text" name="name" placeholder="ФИО" ref={register({...validators, minLength: {value: 2, message: 'Не менее 2 символов'},maxLength: {value: 25, message: 'Не более 25 символов'}, pattern:{value: /[A-ZА-Я]{2,25}/i,  message: 'от 2 до 25 символов: латиница, кириллица'} })}/>               
+                            <p className={classes.errors1}>{errors.name && errors.name.message}</p>
+                            <input className={classes.infoInput} type="email" name="email" placeholder="email@example.com" ref={register({...validators, pattern:{value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,  message: 'Неверный адрес электронной почты'} })}/>               
+                            <p className={classes.errors2}>{errors.email && errors.email.message}</p>
+                            <input className={classes.infoInput} type="tel" name="mobile" placeholder="Номер телефона" ref={register({...validators, pattern:{value: /^([+]?[0-9\s-\(\)]{3,25})*$/i,  message: 'Пример: +375(29)111-11-11' } })}/>                
+                            <p className={classes.errors3}>{errors.mobile && errors.mobile.message}</p>  
+                            <input className={classes.infoInput} type="text" name="address" placeholder="Адрес доставки" ref={register({...validators, minLength: {value: 2, message: 'Не менее 2 символов'},maxLength: {value: 50, message: 'Не более 50 символов'} })}/>               
+                            <p className={classes.errors4}>{errors.address && errors.address.message}</p>
                         </form>
                         <h5>Магазин который вас обслуживает</h5>
-                        <FormControl component="fieldset">
-                            <RadioGroup aria-label="address" name="address1" value={value}  onChange={addressChange} row>
-                                <FormControlLabel name='address1' value="pushkinskaya" control={<Radio />} label="ст.м. Пушкинская" />
-                                <FormControlLabel name='address1' value="nemiga" control={<Radio />} label="ст.м. Немига" />
+                        {!delivery ? <FormControl component="fieldset">
+                            <RadioGroup aria-label="address" name="address1" value={value2}  onChange={addressChange} row>
+                                <FormControlLabel onChange={() => {setValue2('pushkinskaya')}} name='address1' value="pushkinskaya" control={<Radio />} label="ст.м. Пушкинская" />
+                                <FormControlLabel onChange={() => {setValue2('nemiga')}} name='address1' value="nemiga" control={<Radio />} label="ст.м. Немига" />
                             </RadioGroup>
-                        </FormControl>
+                        </FormControl> : <p>Выберите форму доставки!</p>}
                     </div>
                     <div className={classes.deliveryBlock}>
                         <h5>Форма доставки</h5>

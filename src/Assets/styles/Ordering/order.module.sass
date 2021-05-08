@@ -54,6 +54,7 @@
                     display: flex
                     flex-direction: column
                     padding-bottom: 56px
+                    position: relative
                     .infoInput
                         width: 600px
                         height: 70px
@@ -72,6 +73,22 @@
                             width: 400px
                         @media screen and ( max-width: 422px)
                             width: 310px
+                    .errors1,
+                    .errors2,
+                    .errors3,
+                    .errors4
+                        margin: 0
+                        font-size: 12px
+                        font-weight: 500
+                        color: red
+                        position: absolute
+                        top: 68px
+                    .errors2
+                        top: 160px
+                    .errors3
+                        top: 253px
+                    .errors4
+                        top: 348px
             .deliveryBlock
                 margin-top: 56px
                 border-bottom: 1px solid $med

@@ -1,14 +1,14 @@
 // import uniqid from 'uniqid';
 
-import sink1 from './../Assets/img/sinks/sink1.png';
-import sink2 from './../Assets/img/sinks/sink2.png';
-import sink3 from './../Assets/img/sinks/sink3.png';
-import sink4 from './../Assets/img/sinks/sink4.png';
-import sink5 from './../Assets/img/sinks/sink5.png';
+import sink1 from './../Assets/img/sinks/sink1_optimized.png';
+import sink2 from './../Assets/img/sinks/sink2_optimized.png';
+import sink3 from './../Assets/img/sinks/sink3_optimized.png';
+import sink4 from './../Assets/img/sinks/sink4_optimized.png';
+import sink5 from './../Assets/img/sinks/sink5_optimized.png';
 
-import mixer1 from './../Assets/img/mixer/mixer1.png';
-import mixer2 from './../Assets/img/mixer/mixer2.png';
-import mixer3 from './../Assets/img/mixer/mixer3.png';
+import mixer1 from './../Assets/img/mixer/mixer1_optimized.png';
+import mixer2 from './../Assets/img/mixer/mixer2_optimized.png';
+import mixer3 from './../Assets/img/mixer/mixer3_optimized.png';
 
 import kit1 from './../Assets/img/kitchen_stove/kit1.png';
 import kit2 from './../Assets/img/kitchen_stove/kit2.png';

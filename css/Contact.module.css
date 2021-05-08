@@ -13,7 +13,8 @@
 
 body {
   width: 100vw;
-  height: 100%;
+  height: 100vh;
+  min-height: calc(100vh - 187px - 472px);
   font-family: Montserrat;
   font-style: normal;
   font-weight: 400;
@@ -176,6 +177,7 @@ body {
 .contactContainer .contactSection .contactBlock .feedBackContainer form {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .contactContainer .contactSection .contactBlock .feedBackContainer form .titleLogin {
@@ -204,6 +206,26 @@ body {
   font-size: 16px;
   line-height: 20px;
   resize: none;
+}
+
+.contactContainer .contactSection .contactBlock .feedBackContainer form .errors1,
+.contactContainer .contactSection .contactBlock .feedBackContainer form .errors2,
+.contactContainer .contactSection .contactBlock .feedBackContainer form .errors3 {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: red;
+  position: absolute;
+  top: 127px;
+  text-align: center;
+}
+
+.contactContainer .contactSection .contactBlock .feedBackContainer form .errors2 {
+  top: 221px;
+}
+
+.contactContainer .contactSection .contactBlock .feedBackContainer form .errors3 {
+  top: 398px;
 }
 
 .contactContainer .contactSection .contactBlock .feedBackContainer form .buttonCall {

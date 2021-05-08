@@ -7,10 +7,10 @@ import 'swiper/components/pagination/pagination.scss';
 import 'swiper/components/effect-fade/effect-fade.scss';
 import './../../Assets/styles/index.css';
 
-import slide1 from './../../Assets/img/slider-banner/slide1.png';
-import slide2 from './../../Assets/img/slider-banner/slide2.png';
-import slide3 from './../../Assets/img/slider-banner/slide3.png';
-import slide4 from './../../Assets/img/slider-banner/slide4.png';
+import slide1 from './../../Assets/img/slider-banner/slide1_optimized.png';
+import slide2 from './../../Assets/img/slider-banner/slide2_optimized.png';
+import slide3 from './../../Assets/img/slider-banner/slide3_optimized.png';
+import slide4 from './../../Assets/img/slider-banner/slide4_optimized.png';
 import classes from './../../Assets/styles/Swiper/swiper.module.sass';
 
 SwiperCore.use([Pagination, A11y, Autoplay, EffectFade]);

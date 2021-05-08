@@ -13,7 +13,8 @@
 
 body {
   width: 100vw;
-  height: 100%;
+  height: 100vh;
+  min-height: calc(100vh - 187px - 472px);
   font-family: Montserrat;
   font-style: normal;
   font-weight: 400;
@@ -123,6 +124,20 @@ body {
 .containerForm .buttonLoginUp {
   width: 173px;
   height: 35px;
+}
+
+.containerForm a {
+  text-decoration: none;
+  margin-top: 5px;
+}
+
+.containerForm a .linkTo {
+  font-size: 12px;
+  color: #333333;
+}
+
+.containerForm a .linkTo:hover {
+  color: #AD2131;
 }
 
 .toast {

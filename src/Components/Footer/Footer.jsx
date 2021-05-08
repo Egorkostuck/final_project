@@ -93,7 +93,7 @@ const Footer = () => {
                     <a href = 'https://yandex.ru/legal/confidential' target = '_blank'>Политика конфиденциальности</a>
                 </div>
                 <div>
-                    <p>2020 © Reginox-shop</p>
+                    <p>2021 © Reginox-shop</p>
                 </div>
             </div>
         </footer>

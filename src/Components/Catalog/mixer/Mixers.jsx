@@ -2,9 +2,10 @@ import React, {useEffect} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import classes from './../../../Assets/styles/Catalog/catalog.module.sass';
 import iconCart from './../../../Assets/img/icons/icon-cart-white.svg';
-import {addGoods, disableGoods} from './../../../State/Action';
+import {addGoods, disableGoods, openGoods} from './../../../State/Action';
 import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { NavLink } from 'react-router-dom';
 
 const Mixers = ({successToast}) => {
     const mixerArr = useSelector(state => state.catalogReducer.mixer);
@@ -27,8 +28,12 @@ const Mixers = ({successToast}) => {
         <div className={classes.catalogContainer}>
             {mixerArr.map((item) => (
                 <div className={classes.catalogBlock}>
-                    <img className={classes.sink} src={item.img} alt={`${item.name} image`}/>
-                    <h5 className={classes.name}>{item.name}</h5>
+                    <NavLink to='/goods'>
+                        <img onClick={() => dispatch(openGoods(item))} className={classes.sink} src={item.img} alt={`${item.name} image`}/>
+                    </NavLink>
+                    <NavLink to='/goods'>
+                        <h5 className={classes.name}>{item.name}</h5>
+                    </NavLink>                    
                     <p className={classes.coast}>{`${item.coast} руб.`}</p>
                     <div>
                         {!item.inCart ? <div onClick={() => addGoodsInCart(item)} className={classes.button}>

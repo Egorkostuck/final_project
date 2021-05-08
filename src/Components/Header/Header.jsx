@@ -12,7 +12,7 @@ const Header = () => {
     const [open, setOpen] = useState(false);
     
     return (
-        <header className = 'header-container'>
+        <header className = {open ? 'header-container-active' : 'header-container'}>
             <div className='header-section'>
                 <div className = 'section-contact'>
                     <ContactHeader />
@@ -20,15 +20,15 @@ const Header = () => {
                 <div className = 'section-menu'>
                     <Menu  open={open} setOpen={setOpen}/>
                     <NavLink to="/">
-                        <Logo />
+                        <Logo setOpen={setOpen} />
                     </NavLink>
-                    <CartIcon />
+                    <CartIcon open={open} setOpen={setOpen} />
                 </div>
                 <div>
                     {open && <NavMenu setOpen={setOpen} />}
                 </div>
                 <div>
-                    <Nav />
+                    <Nav setOpen={setOpen}/>
                 </div>
             </div>
         </header>

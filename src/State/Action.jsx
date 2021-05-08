@@ -57,3 +57,11 @@ export function disableGoods(id, field) {
         payload: [id,field]        
     }
 }
+
+export function openGoods(item) {
+    return {
+        type: 'OPEN_GOODS',
+        payload: item     
+    }
+}
+

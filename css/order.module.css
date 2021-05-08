@@ -13,7 +13,8 @@
 
 body {
   width: 100vw;
-  height: 100%;
+  height: 100vh;
+  min-height: calc(100vh - 187px - 472px);
   font-family: Montserrat;
   font-style: normal;
   font-weight: 400;
@@ -29,6 +30,30 @@ body {
   margin: 250px auto 100px auto;
 }
 
+@media screen and (max-width: 1022px) {
+  .orderSection {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .orderSection {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 446px) {
+  .orderSection {
+    width: calc(100% - 20px);
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .orderSection {
+    width: calc(100% - 5px);
+  }
+}
+
 .orderSection h3 {
   font-weight: bold;
   font-size: 48px;
@@ -36,13 +61,51 @@ body {
   margin-bottom: 40px;
 }
 
+@media screen and (max-width: 390px) {
+  .orderSection h3 {
+    font-size: 38px;
+    line-height: 47px;
+  }
+}
+
 .orderSection .contentOrder {
   display: flex;
   justify-content: space-between;
 }
 
+@media screen and (max-width: 860px) {
+  .orderSection .contentOrder {
+    flex-direction: column;
+  }
+}
+
 .orderSection .contentOrder .orderContainer {
   width: 60%;
+}
+
+@media screen and (max-width: 1404px) {
+  .orderSection .contentOrder .orderContainer {
+    width: 55%;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .orderSection .contentOrder .orderContainer {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .orderSection .contentOrder .orderContainer {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 556px) {
+  .orderSection .contentOrder .orderContainer {
+    width: 100%;
+  }
 }
 
 .orderSection .contentOrder .orderContainer h5 {
@@ -50,6 +113,13 @@ body {
   font-size: 18px;
   line-height: 120%;
   margin-bottom: 24px;
+  word-wrap: break-word;
+}
+
+@media screen and (max-width: 360px) {
+  .orderSection .contentOrder .orderContainer h5 {
+    width: 320px;
+  }
 }
 
 .orderSection .contentOrder .orderContainer .typeBuyer {
@@ -68,6 +138,7 @@ body {
   display: flex;
   flex-direction: column;
   padding-bottom: 56px;
+  position: relative;
 }
 
 .orderSection .contentOrder .orderContainer .infoBuyer .infoForm .infoInput {
@@ -80,6 +151,54 @@ body {
   box-sizing: border-box;
   outline: none;
   margin-bottom: 24px;
+}
+
+@media screen and (max-width: 1404px) {
+  .orderSection .contentOrder .orderContainer .infoBuyer .infoForm .infoInput {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 1256px) {
+  .orderSection .contentOrder .orderContainer .infoBuyer .infoForm .infoInput {
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 1176px) {
+  .orderSection .contentOrder .orderContainer .infoBuyer .infoForm .infoInput {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 422px) {
+  .orderSection .contentOrder .orderContainer .infoBuyer .infoForm .infoInput {
+    width: 310px;
+  }
+}
+
+.orderSection .contentOrder .orderContainer .infoBuyer .infoForm .errors1,
+.orderSection .contentOrder .orderContainer .infoBuyer .infoForm .errors2,
+.orderSection .contentOrder .orderContainer .infoBuyer .infoForm .errors3,
+.orderSection .contentOrder .orderContainer .infoBuyer .infoForm .errors4 {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: red;
+  position: absolute;
+  top: 68px;
+}
+
+.orderSection .contentOrder .orderContainer .infoBuyer .infoForm .errors2 {
+  top: 160px;
+}
+
+.orderSection .contentOrder .orderContainer .infoBuyer .infoForm .errors3 {
+  top: 253px;
+}
+
+.orderSection .contentOrder .orderContainer .infoBuyer .infoForm .errors4 {
+  top: 348px;
 }
 
 .orderSection .contentOrder .orderContainer .deliveryBlock {
@@ -96,6 +215,34 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #DCDCDC;
+}
+
+@media screen and (max-width: 1404px) {
+  .orderSection .contentOrder .orderContainer .deliveryBlock .delivery,
+  .orderSection .contentOrder .orderContainer .deliveryBlock .deliveryActive {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 1256px) {
+  .orderSection .contentOrder .orderContainer .deliveryBlock .delivery,
+  .orderSection .contentOrder .orderContainer .deliveryBlock .deliveryActive {
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 1176px) {
+  .orderSection .contentOrder .orderContainer .deliveryBlock .delivery,
+  .orderSection .contentOrder .orderContainer .deliveryBlock .deliveryActive {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 422px) {
+  .orderSection .contentOrder .orderContainer .deliveryBlock .delivery,
+  .orderSection .contentOrder .orderContainer .deliveryBlock .deliveryActive {
+    width: 310px;
+  }
 }
 
 .orderSection .contentOrder .orderContainer .deliveryBlock .delivery:last-child,
@@ -150,6 +297,30 @@ body {
   margin-bottom: 24px;
 }
 
+@media screen and (max-width: 1404px) {
+  .orderSection .contentOrder .orderContainer .moreInfoBlock .moreInfo {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 1256px) {
+  .orderSection .contentOrder .orderContainer .moreInfoBlock .moreInfo {
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 1176px) {
+  .orderSection .contentOrder .orderContainer .moreInfoBlock .moreInfo {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 422px) {
+  .orderSection .contentOrder .orderContainer .moreInfoBlock .moreInfo {
+    width: 310px;
+  }
+}
+
 .orderSection .contentOrder .orderContainer .textFieldForm .textField {
   width: 600px;
   height: 70px;
@@ -162,6 +333,30 @@ body {
   margin-bottom: 24px;
 }
 
+@media screen and (max-width: 1404px) {
+  .orderSection .contentOrder .orderContainer .textFieldForm .textField {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 1256px) {
+  .orderSection .contentOrder .orderContainer .textFieldForm .textField {
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 1176px) {
+  .orderSection .contentOrder .orderContainer .textFieldForm .textField {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 422px) {
+  .orderSection .contentOrder .orderContainer .textFieldForm .textField {
+    width: 310px;
+  }
+}
+
 .orderSection .contentOrder .checkContainer {
   width: 380px;
   height: 517px;
@@ -169,8 +364,27 @@ body {
   background-color: #ECECEC;
 }
 
+@media screen and (max-width: 860px) {
+  .orderSection .contentOrder .checkContainer {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .orderSection .contentOrder .checkContainer {
+    width: 310px;
+    margin: 0;
+  }
+}
+
 .orderSection .contentOrder .checkContainer .checkContent {
   margin: 42px 24px 42px 32px;
+}
+
+@media screen and (max-width: 390px) {
+  .orderSection .contentOrder .checkContainer .checkContent {
+    margin-top: 25px;
+  }
 }
 
 .orderSection .contentOrder .checkContainer .checkContent h5 {

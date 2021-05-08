@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  width: 100%;
+  min-width: 100vw;
+  display: grid;
+  align-content: space-between;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  min-height: calc(100vh - 187px - 472px);
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #333333;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.errorContainer {
+  width: 100%;
+  margin-top: 250px;
+}
+
+.errorContainer .errorBlock {
+  position: relative;
+}
+
+.errorContainer .errorBlock img {
+  width: 100%;
+}
+
+.errorContainer .errorBlock h3 {
+  font-weight: bold;
+  font-size: 70px;
+  line-height: 110%;
+  position: absolute;
+  top: 90px;
+  left: 336px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.errorContainer .errorBlock span {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 34px;
+  color: #A6A6A6;
+  position: absolute;
+  top: 275px;
+  left: 336px;
+}
+
+.errorContainer .errorInfo {
+  width: 60%;
+  margin: 58px auto 20px auto;
+}
+
+.errorContainer .errorInfo p {
+  margin-bottom: 30px;
+}
+
+.errorContainer .errorInfo a {
+  text-decoration: none;
+  color: #AD2131;
+}
+
+.errorContainer .errorInfo a:hover {
+  color: #333333;
+}
+/*# sourceMappingURL=error.module.css.map */

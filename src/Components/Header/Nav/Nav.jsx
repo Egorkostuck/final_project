@@ -4,25 +4,25 @@ import classes from './../../../Assets/styles/Header/Nav.module.sass';
 import './../../../Assets/styles/Header/index.css';
 
 
-const Nav = () => {
+const Nav = ({setOpen}) => {
     return(
         <nav className = { classes.nav } >
-            <NavLink to='/catalog-sink'>
+            <NavLink onClick={() => setOpen(false)} to='/catalog-sink'>
                 Мойки
             </NavLink>
-            <NavLink to = '/catalog-mixers'>
+            <NavLink onClick={() => setOpen(false)} to = '/catalog-mixers'>
                 Смесители
             </NavLink>
-            <NavLink to = '/catalog-plate'>
+            <NavLink onClick={() => setOpen(false)} to = '/catalog-plate'>
                 Плиты
             </NavLink>
-            <NavLink to = '/info'>
+            <NavLink onClick={() => setOpen(false)} to = '/info'>
                 Информация
             </NavLink>            
-            <NavLink to = '/sign-in'>
+            <NavLink onClick={() => setOpen(false)} to = '/sign-in'>
                 Войти в кабинет
             </NavLink>
-            <NavLink to = '/sign-up'>
+            <NavLink onClick={() => setOpen(false)} to = '/sign-up'>
                 Регистрация
             </NavLink>
         </nav>

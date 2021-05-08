@@ -81,6 +81,7 @@
                 form
                     display: flex
                     flex-direction: column
+                    position: relative
                     .titleLogin
                         font-weight: 800
                         font-size: 18px
@@ -103,6 +104,20 @@
                         font-size: 16px
                         line-height: 20px
                         resize: none
+                    .errors1,
+                    .errors2,
+                    .errors3,
+                        margin: 0
+                        font-size: 12px
+                        font-weight: 500
+                        color: red
+                        position: absolute
+                        top: 127px
+                        text-align: center
+                    .errors2
+                        top: 221px
+                    .errors3
+                        top: 398px
                     .buttonCall
                         width: 100%
                         max-width: 341px

@@ -8,17 +8,16 @@ import {changeCity} from './../../State/Action';
 import MapContainer from './Map';
 import emailjs from 'emailjs-com';
 
-const Contact = () => {
+const Contact = ({successToast}) => {
     const CONTACT = [
         {city: 'Минск', mobile: '+375(29)526-91-74', office: '+375(17)123-45-67', email: 'info@rrholding.by', address: 'Трюм', color: '$red'},
         {city: 'Москва', mobile: '+7 (495) 229-85-59', office: '+ 7 (495) 116-52-25', email: 'info@rrholding.ru', address: 'ЭКСПОСТРОЙ'}
     ];
-    const [state, setState] = useState(false);
     const stateContact = useSelector(state => state.contactReducer.contact),
         dispatch =  useDispatch(),
         {register, handleSubmit, errors} = useForm(),
         validators = {
-            required: 'the field can not be empty '
+            required: 'Заполните поле'
         };
 
     const city = (name) => {
@@ -33,6 +32,7 @@ const Contact = () => {
             email: item.email,
             text: item.text
         }, 'user_fTnN5ADGWjQU2M7Ny7cjV');
+        successToast('Ваше письмо успешно отправлено!');
     }
 
     useEffect(() => {
@@ -80,11 +80,12 @@ const Contact = () => {
                     <div className={classes.feedBackContainer}>
                         <form id='fromContact' onSubmit={handleSubmit(feedBack)} className={classes.containerForm}>
                             <h3 className={classes.titleLogin}>Обратная связь</h3>
-                            <input className={classes.inputCall} type="text" name="name" placeholder="Имя" ref={register({...validators, minLength: {value: 2, message: 'The field cannot be empty'},maxLength: {value: 10, message: 'No more than 10 characters'}, pattern:{value: /[A-ZА-Я]{2,10}/i,  message: 'Incorrect data'} })}/>
-                            <input className={classes.inputCall} required type="email" name="email" placeholder="email@example.com" ref={register({...validators, pattern:{value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,  message: 'Invalid email address'} })}/>               
-                            <p className={classes.errors}>{errors.email && errors.email.message}</p>
-                            <textarea form='fromContact' className={classes.inputText} maxLength="340" type="text" name="text" placeholder="Ваше сообщение" ref={register({...validators, minLength: {value: 2, message: 'The field cannot be empty'},maxLength: {value: 340, message: 'No more than 10 characters'}, pattern:{value: /[A-ZА-Я]{2,340}/i,  message: 'The field cannot be empty'} })}/>
-                            <p className={classes.errors}>{errors.email && errors.email.message}</p>
+                            <input className={classes.inputCall} type="text" name="name" placeholder="Имя" ref={register({...validators, minLength: {value: 2, message: 'Заполните поле'},maxLength: {value: 10, message: 'Не более 10 символов'}, pattern:{value: /[A-ZА-Я]{2,10}/i,  message: 'от 2 до 10 символов: латиница либо кириллица'} })}/>
+                            <p className={classes.errors1}>{errors.name && errors.name.message}</p>
+                            <input className={classes.inputCall} required type="email" name="email" placeholder="email@example.com" ref={register({...validators, pattern:{value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,  message: 'Неверный адрес электронной почты'} })}/>               
+                            <p className={classes.errors2}>{errors.email && errors.email.message}</p>
+                            <textarea form='fromContact' className={classes.inputText} maxLength="340" type="text" name="text" placeholder="Ваше сообщение" ref={register({...validators, minLength: {value: 2, message: 'Не меньше 2 символов'},maxLength: {value: 340, message: 'Не больше 340 символов'}, pattern:{value: /[A-ZА-Я0-9._%+-]{2,340}/i,  message: 'от 2 до 340 символов: латиница, кириллица, числа'} })}/>
+                            <p className={classes.errors3}>{errors.text && errors.text.message}</p>
                             <button type="submit" className={classes.buttonCall} disabled={(errors.email && errors.email.message) || (errors.password && errors.password.message)}>Отправить</button>
                             <p>Нажимая кнопку отправить вы даете согласие на обработку пресональных данных</p> 
                         </form>

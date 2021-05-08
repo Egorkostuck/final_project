@@ -15,7 +15,7 @@ const SignUp = ({successToast, errorToast}) => {
     let USERS = [];
 
     const validators = {
-        required: 'The field can not be empty'
+        required: 'Заполните поле'
     };
 
     const onSubmit = (newUser) => {      
@@ -27,7 +27,7 @@ const SignUp = ({successToast, errorToast}) => {
             sendEmail(newUser);
         };  
         if(arrUser !== 0) {
-            arrUser.find(item => (item.name === newUser.name || item.email === newUser.email)) ? errorToast('Такие имя или пароль уже существуют') : addNewUser();
+            arrUser.find(item => (item.name === newUser.name || item.email === newUser.email)) ? errorToast('Такое имя или пароль уже существуют') : addNewUser();
         } else {
             addNewUser();      
         }       
@@ -51,13 +51,16 @@ const SignUp = ({successToast, errorToast}) => {
         <div>
             <form onSubmit={handleSubmit(onSubmit)}  className={styles.containerForm}>
                 <h3 className={styles.titleLoginUp}>Регистрация</h3>
-                <input className={styles.inputLogin} type="text" name="name" placeholder="Имя" ref={register({...validators, minLength: {value: 2, message: 'The field cannot be empty'},maxLength: {value: 10, message: 'No more than 10 characters'}, pattern:{value: /[A-Z]{2,10}/i,  message: 'only Latin'} })}/>               
+                <input className={styles.inputLogin} type="text" name="name" placeholder="Имя" ref={register({...validators, minLength: {value: 2, message: 'Заполните поле'},maxLength: {value: 10, message: 'Не больше 10 символов'}, pattern:{value: /[A-Z]{2,10}/i,  message: 'только латиница'} })}/>               
                 <p className={styles.errors1}>{errors.name && errors.name.message}</p>
-                <input className={styles.inputLogin} type="email" name="email" placeholder="email@example.com" ref={register({...validators, pattern:{value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,  message: 'Invalid email address'} })}/>               
+                <input className={styles.inputLogin} type="email" name="email" placeholder="email@example.com" ref={register({...validators, pattern:{value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,  message: 'Неверный адрес электронной почты'} })}/>               
                 <p className={styles.errors2}>{errors.email && errors.email.message}</p>
-                <input className={styles.inputLogin} type="password" name="password" placeholder="Придумайте пароль" ref={register({...validators, pattern:{value: /^[A-Z0-9_-]{8,12}$/i,  message: '8 to 12 characters: Latin, numbers, underscore and hyphen'} })}/>                
+                <input className={styles.inputLogin} type="password" name="password" placeholder="Придумайте пароль" ref={register({...validators, pattern:{value: /^[A-Z0-9_-]{8,12}$/i,  message: 'от 8 до 12 символов: латиница, числа, подчеркивание, дефис'} })}/>                
                 <p className={styles.errors3}>{errors.password && errors.password.message}  </p>  
                 <button type="submit" className={styles.buttonLoginUp} disabled={(errors.name && errors.name.message) || (errors.email && errors.email.message) || (errors.password && errors.password.message)}>Зарегистрироваться</button>
+                <NavLink to='/sign-in'>
+                    <p className={styles.linkTo}>Уже зарегистрированы?</p>
+                </NavLink>
             </form>
             <ToastContainer
                 newestOnTop={false}

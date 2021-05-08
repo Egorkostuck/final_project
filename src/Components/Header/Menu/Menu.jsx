@@ -2,9 +2,6 @@ import React, {useState} from 'react';
 import './../../../Assets/styles/Header/menuBurger.sass';
 import burger from './../../../Assets/img/icons/icon-menu-white.svg';
 import iconX from './../../../Assets/img/icons/icon-esc.svg';
-import Nav from './../Nav/Nav';
-import NavMenu from './Nav-menu';
-import {useSelector, useDispatch} from 'react-redux';
 
 const Menu = ({open, setOpen}) => {
     return(

@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
-import {deleteGoods, deleteCount, addCount} from './../../State/Action';
+import {deleteGoods, deleteCount, addCount, disableGoods} from './../../State/Action';
 import styles from './../../Assets/styles/Cart/cart.module.sass';
 import { NavLink } from 'react-router-dom';
 
@@ -16,7 +16,7 @@ const Cart = () => {
     console.log(CARTARR);
 
     const deleteGoodsInCart = (item) => {
-        dispatch(deleteGoods(item));        
+        dispatch(deleteGoods(item));      
     }
 
     const deleteCountGoods = (item) => {

@@ -1,4 +1,3 @@
-
 .MuiTypography-root span{
     font-family: 'Montserrat' !important;
     font-size: 14px !important;
@@ -7,4 +6,10 @@
 
 .MuiIconButton-label {
     color: #AD2131;
+}
+.MuiInput-underline:before {
+    border-bottom: none !important;
+}
+.MuiInputBase-input {
+    padding: 0 !important;
 }
