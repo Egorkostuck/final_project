@@ -6,7 +6,7 @@ import icon from './../../../Assets/img/icons/icon-cart-white.svg';
 import iconFull from './../../../Assets/img/icons/icon_cart_full.svg';
 
 
-const CartIcon = ({open, setOpen}) => {
+const CartIcon = ({setOpen}) => {
     const stateCart = useSelector(state => state.cartReducer.cart);
     console.log(stateCart.length);
     const [cart, setCart] = useState(false);

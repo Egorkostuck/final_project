@@ -1,0 +1,154 @@
+@import './../../../App.sass'
+
+.modalContainer
+    width: 100vw
+    height: 100vh
+    background-color: rgba(0,0,0,0.6)
+    position: fixed
+    top: 0
+    left: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    z-index: 100
+    .modalBlock
+        width: 70vw
+        height: 80vh
+        max-width: 1280px
+        display: flex
+        align-items: center
+        justify-content: space-between
+        background-color: $white
+        padding: 80px 80px
+        position: relative
+        @media screen and ( max-width: 1176px )
+            padding: 40px 40px
+        @media screen and ( max-width: 1058px )
+            width: 80%
+        @media screen and ( max-width: 926px )
+            width: 90%
+        @media screen and ( max-width: 824px )
+            flex-direction: column
+            overflow: scroll
+        @media screen and ( max-width: 400px )
+            padding: 20px 10px
+        .formBlock
+            width: 60%
+            max-width: 600px
+            margin-right: 50px
+            @media screen and ( max-width: 824px )
+                width: 90%
+                margin: 0 auto
+            h3
+                font-weight: bold
+                font-size: calc(22px + 10 * (100vw / 1280))
+                line-height: 160% 
+                text-transform: uppercase
+                margin-bottom: 40px
+                word-wrap: break-word
+                @media screen and ( max-width: 767px)
+                    font-size: calc(22px + (10 + 10*0.7)*((100vw - 320px) / 1280))
+            .containerForm
+                position: relative
+                .infoInput
+                    width: 100%
+                    height: 70px
+                    font-size: 16px
+                    line-height: 20px
+                    padding: 26px 24px
+                    box-sizing: border-box
+                    border: 1px solid $med
+                    outline: none
+                    margin-bottom: 24px
+                .errors1,
+                .errors2,
+                .errors3,
+                    margin: 0
+                    font-size: 12px
+                    font-weight: 500
+                    color: red
+                    position: absolute
+                    top: 68px
+                    text-align: center
+                .errors2
+                    top: 160px
+                .errors3
+                    top: 255px
+            .text
+                margin-bottom: 24px
+                word-wrap: break-word
+                font-size: calc(14px + 6 * (100vw / 1280))
+                @media screen and ( max-width: 767px)
+                    font-size: calc(14px + (6 + 6*0.7)*((100vw - 320px) / 1280))
+        .goodBlock
+            width: 40%
+            text-align: center
+            @media screen and ( max-width: 824px )
+                width: 90%
+            img
+                width: 271px
+                height: 200px
+                @media screen and ( max-width: 332px )
+                    width: 251px
+            h5
+                font-weight: 800
+                font-size: 18px
+                line-height: 120%
+                margin-top: 20px
+                margin-bottom: 32px
+        .countBlock
+            display: flex
+            width: 100%
+            max-width: 384px
+            height: 70px
+            align-items: center
+            background-color: $gray-ultra-light
+            margin: 31px auto 0 auto
+            .countText
+                margin-right: auto
+                padding-left: 24px             
+            button
+                width: 40px
+                height: 100%
+                border: none
+                outline: none
+                font-size: 18px
+                background-color: $gray-ultra-light
+                &:hover
+                    background-color: $gray-light
+            .count
+                width: 40px
+                height: 100%
+                text-align: center
+                display: flex
+                align-items: center
+                background-color: $gray-ultra-light
+                p
+                    width: 40px 
+        .buttonCall
+            width: 100%
+            max-width: 384px
+            height: 70px
+            background-color: $red
+            color: $white
+            font-size: 16px
+            line-height: 20px
+            border: none
+            outline: none
+            margin-top: 24px
+            margin-bottom: 14px
+            &:hover
+                background-color: #2f9e01
+        .notice
+            font-size: 14px
+            color: $gray
+            line-height: 145%
+        .buttonEsc
+            width: 21px
+            position: absolute
+            text-align: center
+            top: 15px
+            right: 15px
+            color: $med
+            &:hover
+                color: $red

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import classes from './../../../Assets/styles/Header/contactHeader.module.sass';
 import {NavLink} from 'react-router-dom';
 

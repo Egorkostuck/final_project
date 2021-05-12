@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './../../../Assets/styles/Header/menuBurger.sass';
 import burger from './../../../Assets/img/icons/icon-menu-white.svg';
 import iconX from './../../../Assets/img/icons/icon-esc.svg';

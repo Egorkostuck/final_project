@@ -7,25 +7,26 @@ import {useSelector, useDispatch} from 'react-redux';
 import {changeCity} from './../../State/Action';
 import MapContainer from './Map';
 import emailjs from 'emailjs-com';
+import { NavLink } from 'react-router-dom';
 
 const Contact = ({successToast}) => {
     const CONTACT = [
         {city: 'Минск', mobile: '+375(29)526-91-74', office: '+375(17)123-45-67', email: 'info@rrholding.by', address: 'Трюм', color: '$red'},
         {city: 'Москва', mobile: '+7 (495) 229-85-59', office: '+ 7 (495) 116-52-25', email: 'info@rrholding.ru', address: 'ЭКСПОСТРОЙ'}
     ];
-    const stateContact = useSelector(state => state.contactReducer.contact),
-        dispatch =  useDispatch(),
-        {register, handleSubmit, errors} = useForm(),
-        validators = {
-            required: 'Заполните поле'
-        };
+    const stateContact = useSelector(state => state.contactReducer.contact);
+    const dispatch =  useDispatch();
+    const {register, handleSubmit, errors} = useForm();
+    const validators = {
+        required: 'Заполните поле'
+    };
 
     const city = (name) => {
         let change = CONTACT.find(item => item.city === name);
         dispatch(changeCity(change));
     }
 
-    const feedBack = (item) => {
+    const feedBack = (item, e) => {
         emailjs.send("service_qw82aqe","template_8xwzayf",{
             from_name: item.name,
             name: "Admin",
@@ -33,6 +34,7 @@ const Contact = ({successToast}) => {
             text: item.text
         }, 'user_fTnN5ADGWjQU2M7Ny7cjV');
         successToast('Ваше письмо успешно отправлено!');
+        e.target.reset();
     }
 
     useEffect(() => {
@@ -54,7 +56,7 @@ const Contact = ({successToast}) => {
                                 <div>
                                     <h5>Телефон</h5>
                                     <a href='tel: +375295269174'>{stateContact[0].mobile}</a>
-                                    <p className={classes.comment}>многоканальный</p>
+                                    <p className={classes.comment}>мобильный</p>
                                     <a href='tel: +375295269174'>{stateContact[0].office}</a>
                                     <p className={classes.comment}>офис</p>
                                 </div>

@@ -19,7 +19,7 @@ const Footer = () => {
     ];
     let DATACATALOG = [
         {tittle: 'Мойки', path: '/catalog-sink'},
-        {tittle: 'Смесители', path: '/catalog-mixer'},
+        {tittle: 'Смесители', path: '/catalog-mixers'},
         {tittle: 'Плиты', path: '/catalog-plate'}
     ];
     let DATABRANDS = [

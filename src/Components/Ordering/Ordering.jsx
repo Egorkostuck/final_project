@@ -6,7 +6,6 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import {useForm} from 'react-hook-form';
-import emailjs from 'emailjs-com';
 import TextField from '@material-ui/core/TextField';
 import {ToastContainer} from 'react-toastify';
 import { useHistory } from 'react-router-dom';

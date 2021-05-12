@@ -32,7 +32,7 @@ const Mixers = ({successToast}) => {
                         <img onClick={() => dispatch(openGoods(item))} className={classes.sink} src={item.img} alt={`${item.name} image`}/>
                     </NavLink>
                     <NavLink to='/goods'>
-                        <h5 className={classes.name}>{item.name}</h5>
+                        <h5 onClick={() => dispatch(openGoods(item))} className={classes.name}>{item.name}</h5>
                     </NavLink>                    
                     <p className={classes.coast}>{`${item.coast} руб.`}</p>
                     <div>

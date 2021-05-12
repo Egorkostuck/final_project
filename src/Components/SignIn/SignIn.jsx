@@ -14,8 +14,9 @@ const SignIn = ({successToast, errorToast}) => {
         required: 'Заполните поле'
     };
 
-    const signIn = (value) => {
+    const signIn = (value, e) => {
         dataUsers.find(item => item.email === value.email && item.password === value.password) ? successToast('Вход успешно завершен!') :  errorToast('Неверный логин или пароль!');
+        e.target.reset();
     };
 
     return(

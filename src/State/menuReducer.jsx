@@ -1,5 +1,3 @@
-// import uniqid from 'uniqid';
-
 const initialState = {open: false};
 
 export default (state = initialState, action) => {

@@ -18,19 +18,21 @@ const SignUp = ({successToast, errorToast}) => {
         required: 'Заполните поле'
     };
 
-    const onSubmit = (newUser) => {      
+    const onSubmit = (newUser, e) => {      
         const addNewUser = () => {
             console.log(newUser)
             USERS.push(newUser);
             dispatch(addUser(newUser));
             successToast('Вы успешно зарегистрированы!');
-            sendEmail(newUser);
+            sendEmail(newUser); 
         };  
         if(arrUser !== 0) {
             arrUser.find(item => (item.name === newUser.name || item.email === newUser.email)) ? errorToast('Такое имя или пароль уже существуют') : addNewUser();
+            e.target.reset();
         } else {
-            addNewUser();      
-        }       
+            addNewUser();
+            e.target.reset();     
+        } 
     };
 
     useEffect(() => {

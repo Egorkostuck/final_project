@@ -123,7 +123,8 @@ body {
   padding-left: 120px;
 }
 
-.goodsContainer .goodsInfo .buttonBlock .imgButton {
+.goodsContainer .goodsInfo .buttonBlock .imgButton,
+.goodsContainer .goodsInfo .buttonBlock .imgButtonActive {
   width: 115px;
   height: 70px;
   background-color: #AD2131;
@@ -132,16 +133,19 @@ body {
   align-items: center;
 }
 
-.goodsContainer .goodsInfo .buttonBlock .imgButton:hover {
+.goodsContainer .goodsInfo .buttonBlock .imgButton:hover,
+.goodsContainer .goodsInfo .buttonBlock .imgButtonActive:hover {
   width: 269px;
 }
 
-.goodsContainer .goodsInfo .buttonBlock .imgButton .iconButton {
+.goodsContainer .goodsInfo .buttonBlock .imgButton .iconButton,
+.goodsContainer .goodsInfo .buttonBlock .imgButtonActive .iconButton {
   width: 25px;
   height: 25px;
 }
 
-.goodsContainer .goodsInfo .buttonBlock .imgButton .textInCart {
+.goodsContainer .goodsInfo .buttonBlock .imgButton .textInCart,
+.goodsContainer .goodsInfo .buttonBlock .imgButtonActive .textInCart {
   display: none;
   font-size: 16px;
   line-height: 20px;
@@ -149,7 +153,12 @@ body {
   margin-left: 15px;
 }
 
-.goodsContainer .goodsInfo .buttonBlock .imgButton:hover .textInCart {
+.goodsContainer .goodsInfo .buttonBlock .imgButton:hover .textInCart,
+.goodsContainer .goodsInfo .buttonBlock .imgButtonActive:hover .textInCart {
   display: block;
+}
+
+.goodsContainer .goodsInfo .buttonBlock .imgButtonActive {
+  pointer-events: none;
 }
 /*# sourceMappingURL=goods.module.css.map */

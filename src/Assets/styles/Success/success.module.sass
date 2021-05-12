@@ -3,29 +3,36 @@
 .successContainer
     width: 70%
     margin: 250px auto 0px auto
-    h3
+    @media screen and ( max-width: 1022px)
+        width: 85%
+    @media screen and ( max-width: 890px)
+        margin-top: 150px
+    @media screen and ( max-width: 810px)
+        width: 90%
+        overflow: hidden
+    @media screen and ( max-width: 375px)
+        width: 100%
+    h3  
         font-weight: bold
         font-size: 48px
-        line-height: 59px
+        line-height: 110%
         margin-bottom: 56px
+        @media screen and ( max-width: 890px)
+            margin-bottom: 26px
+        @media screen and ( max-width: 767px)
+            font-size: calc(24px + (24 + 24*0.7)*((100vw - 320px) / 1280))
     .successBlock
         width: 70%
         margin: 0 auto
-        position: relative
+        @media screen and ( max-width: 767px)
+            font-size: calc(14px + (6 + 6*0.7)*((100vw - 320px) / 1280))
         p
             margin-bottom: 40px
-            position: absolute
-            top: 0
-            right: 0
         a
             text-decoration: none
             color: $red
-            position: absolute
-            left: 0
-            top: 200px
+            margin-top: 15px
+            @media screen and ( max-width: 866px )
+                top: 250px
             &:hover
                 color: $grafit
-        img
-            position: relative
-            top: -100px
-            left: 500px

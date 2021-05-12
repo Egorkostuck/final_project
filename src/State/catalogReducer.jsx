@@ -1,5 +1,3 @@
-// import uniqid from 'uniqid';
-
 import sink1 from './../Assets/img/sinks/sink1_optimized.png';
 import sink2 from './../Assets/img/sinks/sink2_optimized.png';
 import sink3 from './../Assets/img/sinks/sink3_optimized.png';
@@ -47,7 +45,6 @@ export default (state = initialState, action) => {
         case 'DISABLE_GOODS':
         let result = state[action.payload[1]].find(item => item.id === action.payload[0]); 
         result.inCart = !result.inCart;
-        debugger
         return {
             ...state,
            [action.payload[1]]: state[action.payload[1]]
